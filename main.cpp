@@ -10,7 +10,6 @@
 
 #include <iostream>
 #include <fstream>
-#include <filesystem>
 #include <functional>
 
 #include <cppast/cpp_class.hpp>
@@ -73,7 +72,7 @@ void generate_serialize_member(std::ostream& out, const cppast::cpp_member_varia
 }
 
 // generate serialization function
-void generate_serialize(const cppast::cpp_file& file)
+void generate_serialize(const cppast::cpp_file& file, const std::string &name)
 {
     cppast::visit(file,
                   [](const cppast::cpp_entity& e) {
@@ -126,6 +125,10 @@ void generate_serialize(const cppast::cpp_file& file)
                   });
 
     /* include necessary headers */ 
+    std::cout << "#include <nlohmann/json.hpp>\n";
+    std::cout << "#include <Engine.hpp>\n";
+    std::cout << "#ifdef USER_LIBRARY\n#include <User.hpp>\n#endif\n";
+    
     /*
     instantiate function that creates the object of the type. need to iterate over all the entities. 
     use constructor of that type. return the created object's pointer.
@@ -146,6 +149,8 @@ void generate_serialize(const cppast::cpp_file& file)
     // serialization should only be done for classes and members that are specified as [[Serialize]]
     // this is because figuring out whether if the class derives from Entity is a hard task.
     // specifying [[Serialize]] with wrong types would result in compile error. due to the lack of to_json or from_json function.
+    // need to separate Engine classes and User classes. excluding Engine classes in the User module is important.
+    // maybe possible to do this by using namespace names. only move in if the namespace matches with the module. 
 
     // change this project name to "header tool" or something 
     // add this executable to the Newbie project 
@@ -155,30 +160,20 @@ void generate_serialize(const cppast::cpp_file& file)
 
 int main(int argc, char* argv[])
 {
-    /* create compile_commands.json file to the specified directory given in argv[1]. use argv[2] as a directory to get files */
+    /* create compile_commands.json file to the specified directory given in argv[1]. use argv[2] as a header file path */
     std::string build_dir(argv[1]);
-    std::string src_dir(argv[2]);
+    std::string src(argv[2]);
     std::ofstream fs(build_dir + "/compile_commands.json");
     if (fs.fail()) {
         std::cerr << "failed to open file compile_commands.json\n";
     }
     try {
         using json = nlohmann::json;
-        json js;
-        std::function<void(const std::string &)> write = [&write, &js](const std::string &path) {
-            for (auto &e : std::filesystem::directory_iterator(path)) {
-                if (e.is_directory()) {
-                    write(e.path().string());
-                } else if (e.path().extension() == ".hpp") {
-                    json obj;
-                    obj["directory"] = path; 
-                    obj["command"] = "g++ -std=c++14 -D_DEBUG_FUNCTIONAL_MACHINERY -c " + e.path().string();
-                    obj["file"] = e.path().string();
-                    js.push_back(obj);
-                }
-            }
-        };
-        write(src_dir);
+        json js, obj;
+        obj["directory"] = build_dir; 
+        obj["command"] = "g++ -std=c++14 -D_DEBUG_FUNCTIONAL_MACHINERY -c " + src;
+        obj["file"] = src;
+        js.push_back(obj);
         fs << js;
         fs.flush();
     } catch(...) {}

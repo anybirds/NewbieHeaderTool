@@ -34,8 +34,9 @@ int example_main(int argc, char* argv[], const cppast::cpp_entity_index& index, 
         // error has been logged to stderr
         return 1;
 
+    std::string name(argv[3]);
     for (auto& file : parser.files())
-        cb(file);
+        cb(file, name);
 
     return 0;
 }
