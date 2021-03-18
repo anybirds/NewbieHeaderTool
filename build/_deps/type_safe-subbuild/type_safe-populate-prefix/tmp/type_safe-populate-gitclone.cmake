@@ -1,15 +1,15 @@
 
-if(NOT "C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/type_safe-populate-gitinfo.txt" IS_NEWER_THAN "C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/type_safe-populate-gitclone-lastrun.txt")
-  message(STATUS "Avoiding repeated git clone, stamp file is up to date: 'C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/type_safe-populate-gitclone-lastrun.txt'")
+if(NOT "C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/type_safe-populate-gitinfo.txt" IS_NEWER_THAN "C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/type_safe-populate-gitclone-lastrun.txt")
+  message(STATUS "Avoiding repeated git clone, stamp file is up to date: 'C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/type_safe-populate-gitclone-lastrun.txt'")
   return()
 endif()
 
 execute_process(
-  COMMAND ${CMAKE_COMMAND} -E rm -rf "C:/project/cppast_practice/build/_deps/type_safe-src"
+  COMMAND ${CMAKE_COMMAND} -E rm -rf "C:/project/headertool/build/_deps/type_safe-src"
   RESULT_VARIABLE error_code
   )
 if(error_code)
-  message(FATAL_ERROR "Failed to remove directory: 'C:/project/cppast_practice/build/_deps/type_safe-src'")
+  message(FATAL_ERROR "Failed to remove directory: 'C:/project/headertool/build/_deps/type_safe-src'")
 endif()
 
 # try the clone 3 times in case there is an odd git clone issue
@@ -18,7 +18,7 @@ set(number_of_tries 0)
 while(error_code AND number_of_tries LESS 3)
   execute_process(
     COMMAND "C:/Program Files/Git/mingw64/bin/git.exe"  clone --no-checkout "https://github.com/foonathan/type_safe" "type_safe-src"
-    WORKING_DIRECTORY "C:/project/cppast_practice/build/_deps"
+    WORKING_DIRECTORY "C:/project/headertool/build/_deps"
     RESULT_VARIABLE error_code
     )
   math(EXPR number_of_tries "${number_of_tries} + 1")
@@ -33,7 +33,7 @@ endif()
 
 execute_process(
   COMMAND "C:/Program Files/Git/mingw64/bin/git.exe"  checkout origin/main --
-  WORKING_DIRECTORY "C:/project/cppast_practice/build/_deps/type_safe-src"
+  WORKING_DIRECTORY "C:/project/headertool/build/_deps/type_safe-src"
   RESULT_VARIABLE error_code
   )
 if(error_code)
@@ -44,23 +44,23 @@ set(init_submodules TRUE)
 if(init_submodules)
   execute_process(
     COMMAND "C:/Program Files/Git/mingw64/bin/git.exe"  submodule update --recursive --init 
-    WORKING_DIRECTORY "C:/project/cppast_practice/build/_deps/type_safe-src"
+    WORKING_DIRECTORY "C:/project/headertool/build/_deps/type_safe-src"
     RESULT_VARIABLE error_code
     )
 endif()
 if(error_code)
-  message(FATAL_ERROR "Failed to update submodules in: 'C:/project/cppast_practice/build/_deps/type_safe-src'")
+  message(FATAL_ERROR "Failed to update submodules in: 'C:/project/headertool/build/_deps/type_safe-src'")
 endif()
 
 # Complete success, update the script-last-run stamp file:
 #
 execute_process(
   COMMAND ${CMAKE_COMMAND} -E copy
-    "C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/type_safe-populate-gitinfo.txt"
-    "C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/type_safe-populate-gitclone-lastrun.txt"
+    "C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/type_safe-populate-gitinfo.txt"
+    "C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/type_safe-populate-gitclone-lastrun.txt"
   RESULT_VARIABLE error_code
   )
 if(error_code)
-  message(FATAL_ERROR "Failed to copy script-last-run stamp file: 'C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/type_safe-populate-gitclone-lastrun.txt'")
+  message(FATAL_ERROR "Failed to copy script-last-run stamp file: 'C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/type_safe-populate-gitclone-lastrun.txt'")
 endif()
 

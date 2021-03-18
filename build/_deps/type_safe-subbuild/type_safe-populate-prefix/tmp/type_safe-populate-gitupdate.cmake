@@ -5,7 +5,7 @@ cmake_minimum_required(VERSION 3.5)
 
 execute_process(
   COMMAND "C:/Program Files/Git/mingw64/bin/git.exe" rev-list --max-count=1 HEAD
-  WORKING_DIRECTORY "C:/project/cppast_practice/build/_deps/type_safe-src"
+  WORKING_DIRECTORY "C:/project/headertool/build/_deps/type_safe-src"
   RESULT_VARIABLE error_code
   OUTPUT_VARIABLE head_sha
   OUTPUT_STRIP_TRAILING_WHITESPACE
@@ -16,7 +16,7 @@ endif()
 
 execute_process(
   COMMAND "C:/Program Files/Git/mingw64/bin/git.exe" show-ref "origin/main"
-  WORKING_DIRECTORY "C:/project/cppast_practice/build/_deps/type_safe-src"
+  WORKING_DIRECTORY "C:/project/headertool/build/_deps/type_safe-src"
   OUTPUT_VARIABLE show_ref_output
   )
 # If a remote ref is asked for, which can possibly move around,
@@ -42,7 +42,7 @@ endif()
 # yet).
 execute_process(
   COMMAND "C:/Program Files/Git/mingw64/bin/git.exe" rev-list --max-count=1 "${git_tag}"
-  WORKING_DIRECTORY "C:/project/cppast_practice/build/_deps/type_safe-src"
+  WORKING_DIRECTORY "C:/project/headertool/build/_deps/type_safe-src"
   RESULT_VARIABLE error_code
   OUTPUT_VARIABLE tag_sha
   OUTPUT_STRIP_TRAILING_WHITESPACE
@@ -52,7 +52,7 @@ execute_process(
 if(error_code OR is_remote_ref OR NOT ("${tag_sha}" STREQUAL "${head_sha}"))
   execute_process(
     COMMAND "C:/Program Files/Git/mingw64/bin/git.exe" fetch
-    WORKING_DIRECTORY "C:/project/cppast_practice/build/_deps/type_safe-src"
+    WORKING_DIRECTORY "C:/project/headertool/build/_deps/type_safe-src"
     RESULT_VARIABLE error_code
     )
   if(error_code)
@@ -63,7 +63,7 @@ if(error_code OR is_remote_ref OR NOT ("${tag_sha}" STREQUAL "${head_sha}"))
     # Check if stash is needed
     execute_process(
       COMMAND "C:/Program Files/Git/mingw64/bin/git.exe" status --porcelain
-      WORKING_DIRECTORY "C:/project/cppast_practice/build/_deps/type_safe-src"
+      WORKING_DIRECTORY "C:/project/headertool/build/_deps/type_safe-src"
       RESULT_VARIABLE error_code
       OUTPUT_VARIABLE repo_status
       )
@@ -77,7 +77,7 @@ if(error_code OR is_remote_ref OR NOT ("${tag_sha}" STREQUAL "${head_sha}"))
     if(need_stash)
       execute_process(
         COMMAND "C:/Program Files/Git/mingw64/bin/git.exe" stash save --all;--quiet
-        WORKING_DIRECTORY "C:/project/cppast_practice/build/_deps/type_safe-src"
+        WORKING_DIRECTORY "C:/project/headertool/build/_deps/type_safe-src"
         RESULT_VARIABLE error_code
         )
       if(error_code)
@@ -88,7 +88,7 @@ if(error_code OR is_remote_ref OR NOT ("${tag_sha}" STREQUAL "${head_sha}"))
     if("REBASE" STREQUAL "CHECKOUT")
       execute_process(
         COMMAND "C:/Program Files/Git/mingw64/bin/git.exe" checkout "${git_remote}/${git_tag}"
-        WORKING_DIRECTORY "C:/project/cppast_practice/build/_deps/type_safe-src"
+        WORKING_DIRECTORY "C:/project/headertool/build/_deps/type_safe-src"
         RESULT_VARIABLE error_code
         )
       if(error_code)
@@ -98,7 +98,7 @@ if(error_code OR is_remote_ref OR NOT ("${tag_sha}" STREQUAL "${head_sha}"))
       # Pull changes from the remote branch
       execute_process(
         COMMAND "C:/Program Files/Git/mingw64/bin/git.exe" rebase "${git_remote}/${git_tag}"
-        WORKING_DIRECTORY "C:/project/cppast_practice/build/_deps/type_safe-src"
+        WORKING_DIRECTORY "C:/project/headertool/build/_deps/type_safe-src"
         RESULT_VARIABLE error_code
         OUTPUT_VARIABLE rebase_output
         ERROR_VARIABLE  rebase_output
@@ -107,7 +107,7 @@ if(error_code OR is_remote_ref OR NOT ("${tag_sha}" STREQUAL "${head_sha}"))
         # Rebase failed, undo the rebase attempt before continuing
         execute_process(
           COMMAND "C:/Program Files/Git/mingw64/bin/git.exe" rebase --abort
-          WORKING_DIRECTORY "C:/project/cppast_practice/build/_deps/type_safe-src"
+          WORKING_DIRECTORY "C:/project/headertool/build/_deps/type_safe-src"
         )
 
         if(NOT "REBASE" STREQUAL "REBASE_CHECKOUT")
@@ -115,10 +115,10 @@ if(error_code OR is_remote_ref OR NOT ("${tag_sha}" STREQUAL "${head_sha}"))
           if(need_stash)
             execute_process(
               COMMAND "C:/Program Files/Git/mingw64/bin/git.exe" stash pop --index --quiet
-              WORKING_DIRECTORY "C:/project/cppast_practice/build/_deps/type_safe-src"
+              WORKING_DIRECTORY "C:/project/headertool/build/_deps/type_safe-src"
               )
           endif()
-          message(FATAL_ERROR "\nFailed to rebase in: 'C:/project/cppast_practice/build/_deps/type_safe-src'."
+          message(FATAL_ERROR "\nFailed to rebase in: 'C:/project/headertool/build/_deps/type_safe-src'."
                               "\nOutput from the attempted rebase follows:"
                               "\n${rebase_output}"
                               "\n\nYou will have to resolve the conflicts manually")
@@ -139,7 +139,7 @@ if(error_code OR is_remote_ref OR NOT ("${tag_sha}" STREQUAL "${head_sha}"))
           COMMAND "C:/Program Files/Git/mingw64/bin/git.exe" tag -a
                   -m "ExternalProject attempting to move from here to ${git_remote}/${git_tag}"
                   ${tag_name}
-          WORKING_DIRECTORY "C:/project/cppast_practice/build/_deps/type_safe-src"
+          WORKING_DIRECTORY "C:/project/headertool/build/_deps/type_safe-src"
           RESULT_VARIABLE error_code
         )
         if(error_code)
@@ -148,7 +148,7 @@ if(error_code OR is_remote_ref OR NOT ("${tag_sha}" STREQUAL "${head_sha}"))
 
         execute_process(
           COMMAND "C:/Program Files/Git/mingw64/bin/git.exe" checkout "${git_remote}/${git_tag}"
-          WORKING_DIRECTORY "C:/project/cppast_practice/build/_deps/type_safe-src"
+          WORKING_DIRECTORY "C:/project/headertool/build/_deps/type_safe-src"
           RESULT_VARIABLE error_code
         )
         if(error_code)
@@ -161,32 +161,32 @@ if(error_code OR is_remote_ref OR NOT ("${tag_sha}" STREQUAL "${head_sha}"))
     if(need_stash)
       execute_process(
         COMMAND "C:/Program Files/Git/mingw64/bin/git.exe" stash pop --index --quiet
-        WORKING_DIRECTORY "C:/project/cppast_practice/build/_deps/type_safe-src"
+        WORKING_DIRECTORY "C:/project/headertool/build/_deps/type_safe-src"
         RESULT_VARIABLE error_code
         )
       if(error_code)
         # Stash pop --index failed: Try again dropping the index
         execute_process(
           COMMAND "C:/Program Files/Git/mingw64/bin/git.exe" reset --hard --quiet
-          WORKING_DIRECTORY "C:/project/cppast_practice/build/_deps/type_safe-src"
+          WORKING_DIRECTORY "C:/project/headertool/build/_deps/type_safe-src"
           RESULT_VARIABLE error_code
           )
         execute_process(
           COMMAND "C:/Program Files/Git/mingw64/bin/git.exe" stash pop --quiet
-          WORKING_DIRECTORY "C:/project/cppast_practice/build/_deps/type_safe-src"
+          WORKING_DIRECTORY "C:/project/headertool/build/_deps/type_safe-src"
           RESULT_VARIABLE error_code
           )
         if(error_code)
           # Stash pop failed: Restore previous state.
           execute_process(
             COMMAND "C:/Program Files/Git/mingw64/bin/git.exe" reset --hard --quiet ${head_sha}
-            WORKING_DIRECTORY "C:/project/cppast_practice/build/_deps/type_safe-src"
+            WORKING_DIRECTORY "C:/project/headertool/build/_deps/type_safe-src"
           )
           execute_process(
             COMMAND "C:/Program Files/Git/mingw64/bin/git.exe" stash pop --index --quiet
-            WORKING_DIRECTORY "C:/project/cppast_practice/build/_deps/type_safe-src"
+            WORKING_DIRECTORY "C:/project/headertool/build/_deps/type_safe-src"
           )
-          message(FATAL_ERROR "\nFailed to unstash changes in: 'C:/project/cppast_practice/build/_deps/type_safe-src'."
+          message(FATAL_ERROR "\nFailed to unstash changes in: 'C:/project/headertool/build/_deps/type_safe-src'."
                               "\nYou will have to resolve the conflicts manually")
         endif()
       endif()
@@ -194,7 +194,7 @@ if(error_code OR is_remote_ref OR NOT ("${tag_sha}" STREQUAL "${head_sha}"))
   else()
     execute_process(
       COMMAND "C:/Program Files/Git/mingw64/bin/git.exe" checkout "${git_tag}"
-      WORKING_DIRECTORY "C:/project/cppast_practice/build/_deps/type_safe-src"
+      WORKING_DIRECTORY "C:/project/headertool/build/_deps/type_safe-src"
       RESULT_VARIABLE error_code
       )
     if(error_code)
@@ -206,11 +206,11 @@ if(error_code OR is_remote_ref OR NOT ("${tag_sha}" STREQUAL "${head_sha}"))
   if(init_submodules)
     execute_process(
       COMMAND "C:/Program Files/Git/mingw64/bin/git.exe" submodule update --recursive --init 
-      WORKING_DIRECTORY "C:/project/cppast_practice/build/_deps/type_safe-src"
+      WORKING_DIRECTORY "C:/project/headertool/build/_deps/type_safe-src"
       RESULT_VARIABLE error_code
       )
   endif()
   if(error_code)
-    message(FATAL_ERROR "Failed to update submodules in: 'C:/project/cppast_practice/build/_deps/type_safe-src'")
+    message(FATAL_ERROR "Failed to update submodules in: 'C:/project/headertool/build/_deps/type_safe-src'")
   endif()
 endif()

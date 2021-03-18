@@ -1,8 +1,8 @@
-# Install script for directory: C:/project/cppast_practice/build/_deps/type_safe-src
+# Install script for directory: C:/project/headertool/build/_deps/type_safe-src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files/cppast_practice")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files/headertool")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,7 +33,7 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "C:/project/cppast_practice/build/_deps/type_safe-src/include/type_safe")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "C:/project/headertool/build/_deps/type_safe-src/include/type_safe")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)

@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{DC2F95A1-76EC-3CA4-9398-425F53C2CE4C}</ProjectGuid>
+    <ProjectGuid>{41E89804-4E32-3311-9CDF-84A6AC598CD8}</ProjectGuid>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
     <Platform>x64</Platform>
@@ -102,24 +102,24 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\project\cppast_practice\build\_deps\type_safe-subbuild\CMakeFiles\a7eb93b534401e46388ded7feb5158f7\type_safe-populate-mkdir.rule">
+    <CustomBuild Include="C:\project\headertool\build\_deps\type_safe-subbuild\CMakeFiles\f2a073ee00570c74044081c314c7adca\type_safe-populate-mkdir.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Creating directories for 'type_safe-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/cppast_practice/build/_deps/type_safe-src
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/headertool/build/_deps/type_safe-src
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/cppast_practice/build/_deps/type_safe-build
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/headertool/build/_deps/type_safe-build
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/tmp
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/tmp
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-mkdir
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-mkdir
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -128,25 +128,25 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-mkdir</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-mkdir</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Creating directories for 'type_safe-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/cppast_practice/build/_deps/type_safe-src
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/headertool/build/_deps/type_safe-src
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/cppast_practice/build/_deps/type_safe-build
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/headertool/build/_deps/type_safe-build
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/tmp
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/tmp
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-mkdir
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-mkdir
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -155,25 +155,25 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-mkdir</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-mkdir</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Creating directories for 'type_safe-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/cppast_practice/build/_deps/type_safe-src
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/headertool/build/_deps/type_safe-src
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/cppast_practice/build/_deps/type_safe-build
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/headertool/build/_deps/type_safe-build
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/tmp
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/tmp
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-mkdir
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-mkdir
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -182,25 +182,25 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-mkdir</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-mkdir</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Creating directories for 'type_safe-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/cppast_practice/build/_deps/type_safe-src
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/headertool/build/_deps/type_safe-src
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/cppast_practice/build/_deps/type_safe-build
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/headertool/build/_deps/type_safe-build
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/tmp
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/tmp
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-mkdir
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-mkdir
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -209,21 +209,21 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-mkdir</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-mkdir</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\project\cppast_practice\build\_deps\type_safe-subbuild\CMakeFiles\a7eb93b534401e46388ded7feb5158f7\type_safe-populate-download.rule">
+    <CustomBuild Include="C:\project\headertool\build\_deps\type_safe-subbuild\CMakeFiles\f2a073ee00570c74044081c314c7adca\type_safe-populate-download.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Performing download step (git clone) for 'type_safe-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-cd C:\project\cppast_practice\build\_deps
+cd C:\project\headertool\build\_deps
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -P C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/tmp/type_safe-populate-gitclone.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -P C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/tmp/type_safe-populate-gitclone.cmake
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-download
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-download
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -231,18 +231,18 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\type_safe-populate-gitinfo.txt;C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-mkdir;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-download</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\type_safe-populate-gitinfo.txt;C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-mkdir;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-download</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Performing download step (git clone) for 'type_safe-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-cd C:\project\cppast_practice\build\_deps
+cd C:\project\headertool\build\_deps
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -P C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/tmp/type_safe-populate-gitclone.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -P C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/tmp/type_safe-populate-gitclone.cmake
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-download
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-download
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -250,18 +250,18 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\type_safe-populate-gitinfo.txt;C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-mkdir;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-download</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\type_safe-populate-gitinfo.txt;C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-mkdir;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-download</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Performing download step (git clone) for 'type_safe-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-cd C:\project\cppast_practice\build\_deps
+cd C:\project\headertool\build\_deps
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -P C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/tmp/type_safe-populate-gitclone.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -P C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/tmp/type_safe-populate-gitclone.cmake
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-download
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-download
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -269,18 +269,18 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\type_safe-populate-gitinfo.txt;C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-mkdir;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-download</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\type_safe-populate-gitinfo.txt;C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-mkdir;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-download</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Performing download step (git clone) for 'type_safe-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-cd C:\project\cppast_practice\build\_deps
+cd C:\project\headertool\build\_deps
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -P C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/tmp/type_safe-populate-gitclone.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -P C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/tmp/type_safe-populate-gitclone.cmake
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-download
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-download
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -288,20 +288,20 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\type_safe-populate-gitinfo.txt;C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-mkdir;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-download</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\type_safe-populate-gitinfo.txt;C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-mkdir;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-download</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\project\cppast_practice\build\_deps\type_safe-subbuild\CMakeFiles\a7eb93b534401e46388ded7feb5158f7\type_safe-populate-update.rule">
+    <CustomBuild Include="C:\project\headertool\build\_deps\type_safe-subbuild\CMakeFiles\f2a073ee00570c74044081c314c7adca\type_safe-populate-update.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Performing update step for 'type_safe-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-cd C:\project\cppast_practice\build\_deps\type_safe-src
+cd C:\project\headertool\build\_deps\type_safe-src
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -P C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/tmp/type_safe-populate-gitupdate.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -P C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/tmp/type_safe-populate-gitupdate.cmake
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -309,16 +309,16 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-download;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-update</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-update</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Performing update step for 'type_safe-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-cd C:\project\cppast_practice\build\_deps\type_safe-src
+cd C:\project\headertool\build\_deps\type_safe-src
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -P C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/tmp/type_safe-populate-gitupdate.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -P C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/tmp/type_safe-populate-gitupdate.cmake
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -326,16 +326,16 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-download;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-update</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-update</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Performing update step for 'type_safe-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-cd C:\project\cppast_practice\build\_deps\type_safe-src
+cd C:\project\headertool\build\_deps\type_safe-src
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -P C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/tmp/type_safe-populate-gitupdate.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -P C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/tmp/type_safe-populate-gitupdate.cmake
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -343,16 +343,16 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-download;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-update</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-update</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Performing update step for 'type_safe-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-cd C:\project\cppast_practice\build\_deps\type_safe-src
+cd C:\project\headertool\build\_deps\type_safe-src
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -P C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/tmp/type_safe-populate-gitupdate.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -P C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/tmp/type_safe-populate-gitupdate.cmake
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -360,18 +360,18 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-download;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-update</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-update</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\project\cppast_practice\build\_deps\type_safe-subbuild\CMakeFiles\a7eb93b534401e46388ded7feb5158f7\type_safe-populate-patch.rule">
+    <CustomBuild Include="C:\project\headertool\build\_deps\type_safe-subbuild\CMakeFiles\f2a073ee00570c74044081c314c7adca\type_safe-populate-patch.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No patch step for 'type_safe-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-patch
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-patch
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -379,14 +379,14 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-update;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-patch</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-update;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-patch</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">No patch step for 'type_safe-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-patch
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-patch
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -394,14 +394,14 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-update;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-patch</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-update;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-patch</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">No patch step for 'type_safe-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-patch
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-patch
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -409,14 +409,14 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-update;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-patch</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-update;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-patch</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">No patch step for 'type_safe-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-patch
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-patch
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -424,22 +424,22 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-update;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-patch</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-update;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-patch</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\project\cppast_practice\build\_deps\type_safe-subbuild\CMakeFiles\a7eb93b534401e46388ded7feb5158f7\type_safe-populate-configure.rule">
+    <CustomBuild Include="C:\project\headertool\build\_deps\type_safe-subbuild\CMakeFiles\f2a073ee00570c74044081c314c7adca\type_safe-populate-configure.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No configure step for 'type_safe-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-cd C:\project\cppast_practice\build\_deps\type_safe-build
+cd C:\project\headertool\build\_deps\type_safe-build
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-configure
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-configure
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -447,18 +447,18 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\tmp\type_safe-populate-cfgcmd.txt;C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-patch;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-configure</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\tmp\type_safe-populate-cfgcmd.txt;C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-patch;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-configure</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">No configure step for 'type_safe-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-cd C:\project\cppast_practice\build\_deps\type_safe-build
+cd C:\project\headertool\build\_deps\type_safe-build
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-configure
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-configure
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -466,18 +466,18 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\tmp\type_safe-populate-cfgcmd.txt;C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-patch;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-configure</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\tmp\type_safe-populate-cfgcmd.txt;C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-patch;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-configure</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">No configure step for 'type_safe-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-cd C:\project\cppast_practice\build\_deps\type_safe-build
+cd C:\project\headertool\build\_deps\type_safe-build
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-configure
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-configure
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -485,18 +485,18 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\tmp\type_safe-populate-cfgcmd.txt;C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-patch;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-configure</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\tmp\type_safe-populate-cfgcmd.txt;C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-patch;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-configure</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">No configure step for 'type_safe-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-cd C:\project\cppast_practice\build\_deps\type_safe-build
+cd C:\project\headertool\build\_deps\type_safe-build
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-configure
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-configure
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -504,22 +504,22 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\tmp\type_safe-populate-cfgcmd.txt;C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-patch;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-configure</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\tmp\type_safe-populate-cfgcmd.txt;C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-patch;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-configure</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\project\cppast_practice\build\_deps\type_safe-subbuild\CMakeFiles\a7eb93b534401e46388ded7feb5158f7\type_safe-populate-build.rule">
+    <CustomBuild Include="C:\project\headertool\build\_deps\type_safe-subbuild\CMakeFiles\f2a073ee00570c74044081c314c7adca\type_safe-populate-build.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No build step for 'type_safe-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-cd C:\project\cppast_practice\build\_deps\type_safe-build
+cd C:\project\headertool\build\_deps\type_safe-build
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-build
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-build
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -527,18 +527,18 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-configure;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-build</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-configure;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-build</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">No build step for 'type_safe-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-cd C:\project\cppast_practice\build\_deps\type_safe-build
+cd C:\project\headertool\build\_deps\type_safe-build
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-build
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-build
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -546,18 +546,18 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-configure;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-build</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-configure;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-build</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">No build step for 'type_safe-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-cd C:\project\cppast_practice\build\_deps\type_safe-build
+cd C:\project\headertool\build\_deps\type_safe-build
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-build
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-build
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -565,18 +565,18 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-configure;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-build</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-configure;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-build</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">No build step for 'type_safe-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-cd C:\project\cppast_practice\build\_deps\type_safe-build
+cd C:\project\headertool\build\_deps\type_safe-build
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-build
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-build
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -584,22 +584,22 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-configure;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-build</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-configure;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-build</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\project\cppast_practice\build\_deps\type_safe-subbuild\CMakeFiles\a7eb93b534401e46388ded7feb5158f7\type_safe-populate-install.rule">
+    <CustomBuild Include="C:\project\headertool\build\_deps\type_safe-subbuild\CMakeFiles\f2a073ee00570c74044081c314c7adca\type_safe-populate-install.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No install step for 'type_safe-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-cd C:\project\cppast_practice\build\_deps\type_safe-build
+cd C:\project\headertool\build\_deps\type_safe-build
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-install
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-install
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -607,18 +607,18 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-build;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-install</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-build;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-install</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">No install step for 'type_safe-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-cd C:\project\cppast_practice\build\_deps\type_safe-build
+cd C:\project\headertool\build\_deps\type_safe-build
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-install
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-install
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -626,18 +626,18 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-build;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-install</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-build;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-install</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">No install step for 'type_safe-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-cd C:\project\cppast_practice\build\_deps\type_safe-build
+cd C:\project\headertool\build\_deps\type_safe-build
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-install
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-install
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -645,18 +645,18 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-build;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-install</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-build;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-install</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">No install step for 'type_safe-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-cd C:\project\cppast_practice\build\_deps\type_safe-build
+cd C:\project\headertool\build\_deps\type_safe-build
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-install
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-install
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -664,22 +664,22 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-build;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-install</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-build;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-install</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\project\cppast_practice\build\_deps\type_safe-subbuild\CMakeFiles\a7eb93b534401e46388ded7feb5158f7\type_safe-populate-test.rule">
+    <CustomBuild Include="C:\project\headertool\build\_deps\type_safe-subbuild\CMakeFiles\f2a073ee00570c74044081c314c7adca\type_safe-populate-test.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No test step for 'type_safe-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-cd C:\project\cppast_practice\build\_deps\type_safe-build
+cd C:\project\headertool\build\_deps\type_safe-build
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-test
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-test
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -687,18 +687,18 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-install;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-test</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-install;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-test</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">No test step for 'type_safe-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-cd C:\project\cppast_practice\build\_deps\type_safe-build
+cd C:\project\headertool\build\_deps\type_safe-build
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-test
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-test
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -706,18 +706,18 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-install;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-test</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-install;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-test</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">No test step for 'type_safe-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-cd C:\project\cppast_practice\build\_deps\type_safe-build
+cd C:\project\headertool\build\_deps\type_safe-build
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-test
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-test
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -725,18 +725,18 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-install;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-test</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-install;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-test</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">No test step for 'type_safe-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-cd C:\project\cppast_practice\build\_deps\type_safe-build
+cd C:\project\headertool\build\_deps\type_safe-build
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-test
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-test
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -744,20 +744,20 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-install;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-test</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-install;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-test</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\project\cppast_practice\build\_deps\type_safe-subbuild\CMakeFiles\45d5297902533d41115b8e4f90615492\type_safe-populate-complete.rule">
+    <CustomBuild Include="C:\project\headertool\build\_deps\type_safe-subbuild\CMakeFiles\12b6e0ccf13487beb266f40760c0624f\type_safe-populate-complete.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Completed 'type_safe-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/cppast_practice/build/_deps/type_safe-subbuild/CMakeFiles/$(Configuration)
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/headertool/build/_deps/type_safe-subbuild/CMakeFiles/$(Configuration)
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/cppast_practice/build/_deps/type_safe-subbuild/CMakeFiles/$(Configuration)/type_safe-populate-complete
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/headertool/build/_deps/type_safe-subbuild/CMakeFiles/$(Configuration)/type_safe-populate-complete
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-done
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-done
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -765,16 +765,16 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-install;C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-mkdir;C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-download;C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-update;C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-patch;C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-configure;C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-build;C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-test;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\CMakeFiles\$(Configuration)\type_safe-populate-complete</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-install;C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-mkdir;C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-download;C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-update;C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-patch;C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-configure;C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-build;C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-test;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\CMakeFiles\$(Configuration)\type_safe-populate-complete</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Completed 'type_safe-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/cppast_practice/build/_deps/type_safe-subbuild/CMakeFiles/$(Configuration)
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/headertool/build/_deps/type_safe-subbuild/CMakeFiles/$(Configuration)
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/cppast_practice/build/_deps/type_safe-subbuild/CMakeFiles/$(Configuration)/type_safe-populate-complete
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/headertool/build/_deps/type_safe-subbuild/CMakeFiles/$(Configuration)/type_safe-populate-complete
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-done
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-done
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -782,16 +782,16 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-install;C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-mkdir;C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-download;C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-update;C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-patch;C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-configure;C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-build;C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-test;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\CMakeFiles\$(Configuration)\type_safe-populate-complete</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-install;C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-mkdir;C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-download;C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-update;C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-patch;C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-configure;C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-build;C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-test;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\CMakeFiles\$(Configuration)\type_safe-populate-complete</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Completed 'type_safe-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/cppast_practice/build/_deps/type_safe-subbuild/CMakeFiles/$(Configuration)
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/headertool/build/_deps/type_safe-subbuild/CMakeFiles/$(Configuration)
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/cppast_practice/build/_deps/type_safe-subbuild/CMakeFiles/$(Configuration)/type_safe-populate-complete
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/headertool/build/_deps/type_safe-subbuild/CMakeFiles/$(Configuration)/type_safe-populate-complete
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-done
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-done
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -799,16 +799,16 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-install;C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-mkdir;C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-download;C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-update;C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-patch;C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-configure;C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-build;C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-test;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\CMakeFiles\$(Configuration)\type_safe-populate-complete</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-install;C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-mkdir;C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-download;C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-update;C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-patch;C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-configure;C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-build;C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-test;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\CMakeFiles\$(Configuration)\type_safe-populate-complete</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Completed 'type_safe-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/cppast_practice/build/_deps/type_safe-subbuild/CMakeFiles/$(Configuration)
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/project/headertool/build/_deps/type_safe-subbuild/CMakeFiles/$(Configuration)
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/cppast_practice/build/_deps/type_safe-subbuild/CMakeFiles/$(Configuration)/type_safe-populate-complete
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/headertool/build/_deps/type_safe-subbuild/CMakeFiles/$(Configuration)/type_safe-populate-complete
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/cppast_practice/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-done
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/project/headertool/build/_deps/type_safe-subbuild/type_safe-populate-prefix/src/type_safe-populate-stamp/$(Configuration)/type_safe-populate-done
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -816,13 +816,13 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-install;C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-mkdir;C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-download;C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-update;C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-patch;C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-configure;C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-build;C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-test;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\CMakeFiles\$(Configuration)\type_safe-populate-complete</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-install;C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-mkdir;C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-download;C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-update;C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-patch;C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-configure;C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-build;C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\src\type_safe-populate-stamp\$(Configuration)\type_safe-populate-test;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\CMakeFiles\$(Configuration)\type_safe-populate-complete</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\project\cppast_practice\build\_deps\type_safe-subbuild\CMakeFiles\ca2783cc98788b63627b7def3d779fbb\type_safe-populate.rule">
+    <CustomBuild Include="C:\project\headertool\build\_deps\type_safe-subbuild\CMakeFiles\d36f13e08464b9b647cd9f920006f30a\type_safe-populate.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'"></Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
 :cmEnd
@@ -831,8 +831,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\CMakeFiles\$(Configuration)\type_safe-populate-complete;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\CMakeFiles\type_safe-populate</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\CMakeFiles\$(Configuration)\type_safe-populate-complete;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\CMakeFiles\type_safe-populate</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'"></Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
@@ -842,8 +842,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\CMakeFiles\$(Configuration)\type_safe-populate-complete;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\CMakeFiles\type_safe-populate</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\CMakeFiles\$(Configuration)\type_safe-populate-complete;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\CMakeFiles\type_safe-populate</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'"></Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
@@ -853,8 +853,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\CMakeFiles\$(Configuration)\type_safe-populate-complete;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\CMakeFiles\type_safe-populate</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\CMakeFiles\$(Configuration)\type_safe-populate-complete;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\CMakeFiles\type_safe-populate</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'"></Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
@@ -864,16 +864,16 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\CMakeFiles\$(Configuration)\type_safe-populate-complete;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\CMakeFiles\type_safe-populate</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\CMakeFiles\$(Configuration)\type_safe-populate-complete;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\CMakeFiles\type_safe-populate</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\project\cppast_practice\build\_deps\type_safe-subbuild\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/project/cppast_practice/build/_deps/type_safe-subbuild/CMakeLists.txt</Message>
+    <CustomBuild Include="C:\project\headertool\build\_deps\type_safe-subbuild\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/project/headertool/build/_deps/type_safe-subbuild/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/project/cppast_practice/build/_deps/type_safe-subbuild -BC:/project/cppast_practice/build/_deps/type_safe-subbuild --check-stamp-file C:/project/cppast_practice/build/_deps/type_safe-subbuild/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/project/headertool/build/_deps/type_safe-subbuild -BC:/project/headertool/build/_deps/type_safe-subbuild --check-stamp-file C:/project/headertool/build/_deps/type_safe-subbuild/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -881,12 +881,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\ExternalProject-gitupdate.cmake.in;C:\Program Files\CMake\share\cmake-3.19\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\RepositoryInfo.txt.in;C:\project\cppast_practice\build\_deps\type_safe-subbuild\CMakeFiles\3.19.6\CMakeSystem.cmake;C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\tmp\type_safe-populate-cfgcmd.txt.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\ExternalProject-gitupdate.cmake.in;C:\Program Files\CMake\share\cmake-3.19\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\RepositoryInfo.txt.in;C:\project\headertool\build\_deps\type_safe-subbuild\CMakeFiles\3.19.6\CMakeSystem.cmake;C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\tmp\type_safe-populate-cfgcmd.txt.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/project/cppast_practice/build/_deps/type_safe-subbuild/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/project/headertool/build/_deps/type_safe-subbuild/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/project/cppast_practice/build/_deps/type_safe-subbuild -BC:/project/cppast_practice/build/_deps/type_safe-subbuild --check-stamp-file C:/project/cppast_practice/build/_deps/type_safe-subbuild/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/project/headertool/build/_deps/type_safe-subbuild -BC:/project/headertool/build/_deps/type_safe-subbuild --check-stamp-file C:/project/headertool/build/_deps/type_safe-subbuild/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -894,12 +894,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\ExternalProject-gitupdate.cmake.in;C:\Program Files\CMake\share\cmake-3.19\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\RepositoryInfo.txt.in;C:\project\cppast_practice\build\_deps\type_safe-subbuild\CMakeFiles\3.19.6\CMakeSystem.cmake;C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\tmp\type_safe-populate-cfgcmd.txt.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\ExternalProject-gitupdate.cmake.in;C:\Program Files\CMake\share\cmake-3.19\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\RepositoryInfo.txt.in;C:\project\headertool\build\_deps\type_safe-subbuild\CMakeFiles\3.19.6\CMakeSystem.cmake;C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\tmp\type_safe-populate-cfgcmd.txt.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/project/cppast_practice/build/_deps/type_safe-subbuild/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/project/headertool/build/_deps/type_safe-subbuild/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/project/cppast_practice/build/_deps/type_safe-subbuild -BC:/project/cppast_practice/build/_deps/type_safe-subbuild --check-stamp-file C:/project/cppast_practice/build/_deps/type_safe-subbuild/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/project/headertool/build/_deps/type_safe-subbuild -BC:/project/headertool/build/_deps/type_safe-subbuild --check-stamp-file C:/project/headertool/build/_deps/type_safe-subbuild/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -907,12 +907,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\ExternalProject-gitupdate.cmake.in;C:\Program Files\CMake\share\cmake-3.19\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\RepositoryInfo.txt.in;C:\project\cppast_practice\build\_deps\type_safe-subbuild\CMakeFiles\3.19.6\CMakeSystem.cmake;C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\tmp\type_safe-populate-cfgcmd.txt.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\ExternalProject-gitupdate.cmake.in;C:\Program Files\CMake\share\cmake-3.19\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\RepositoryInfo.txt.in;C:\project\headertool\build\_deps\type_safe-subbuild\CMakeFiles\3.19.6\CMakeSystem.cmake;C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\tmp\type_safe-populate-cfgcmd.txt.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/project/cppast_practice/build/_deps/type_safe-subbuild/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/project/headertool/build/_deps/type_safe-subbuild/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/project/cppast_practice/build/_deps/type_safe-subbuild -BC:/project/cppast_practice/build/_deps/type_safe-subbuild --check-stamp-file C:/project/cppast_practice/build/_deps/type_safe-subbuild/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/project/headertool/build/_deps/type_safe-subbuild -BC:/project/headertool/build/_deps/type_safe-subbuild --check-stamp-file C:/project/headertool/build/_deps/type_safe-subbuild/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -920,18 +920,18 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\ExternalProject-gitupdate.cmake.in;C:\Program Files\CMake\share\cmake-3.19\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\RepositoryInfo.txt.in;C:\project\cppast_practice\build\_deps\type_safe-subbuild\CMakeFiles\3.19.6\CMakeSystem.cmake;C:\project\cppast_practice\build\_deps\type_safe-subbuild\type_safe-populate-prefix\tmp\type_safe-populate-cfgcmd.txt.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\project\cppast_practice\build\_deps\type_safe-subbuild\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\ExternalProject-gitupdate.cmake.in;C:\Program Files\CMake\share\cmake-3.19\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\RepositoryInfo.txt.in;C:\project\headertool\build\_deps\type_safe-subbuild\CMakeFiles\3.19.6\CMakeSystem.cmake;C:\project\headertool\build\_deps\type_safe-subbuild\type_safe-populate-prefix\tmp\type_safe-populate-cfgcmd.txt.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\project\headertool\build\_deps\type_safe-subbuild\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <None Include="C:\project\cppast_practice\build\_deps\type_safe-subbuild\CMakeFiles\type_safe-populate">
+    <None Include="C:\project\headertool\build\_deps\type_safe-subbuild\CMakeFiles\type_safe-populate">
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\project\cppast_practice\build\_deps\type_safe-subbuild\ZERO_CHECK.vcxproj">
-      <Project>{61A87852-349D-3F3E-9036-BCCB8EF4D4E8}</Project>
+    <ProjectReference Include="C:\project\headertool\build\_deps\type_safe-subbuild\ZERO_CHECK.vcxproj">
+      <Project>{ECC46383-1CED-3B48-9A52-FED8FDE9A77C}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>

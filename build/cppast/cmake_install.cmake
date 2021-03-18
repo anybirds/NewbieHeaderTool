@@ -1,8 +1,8 @@
-# Install script for directory: C:/project/cppast_practice/cppast
+# Install script for directory: C:/project/headertool/cppast
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files/cppast_practice")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files/headertool")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,9 +34,9 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/project/cppast_practice/build/_deps/type_safe-build/cmake_install.cmake")
-  include("C:/project/cppast_practice/build/cppast/external/tpl/cmake_install.cmake")
-  include("C:/project/cppast_practice/build/cppast/src/cmake_install.cmake")
+  include("C:/project/headertool/build/_deps/type_safe-build/cmake_install.cmake")
+  include("C:/project/headertool/build/cppast/external/tpl/cmake_install.cmake")
+  include("C:/project/headertool/build/cppast/src/cmake_install.cmake")
 
 endif()
 

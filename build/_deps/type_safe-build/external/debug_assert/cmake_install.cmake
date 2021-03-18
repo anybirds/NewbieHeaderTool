@@ -1,8 +1,8 @@
-# Install script for directory: C:/project/cppast_practice/build/_deps/type_safe-src/external/debug_assert
+# Install script for directory: C:/project/headertool/build/_deps/type_safe-src/external/debug_assert
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files/cppast_practice")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files/headertool")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

@@ -1,5 +1,6 @@
 # CMake generation dependency list for this directory.
 C:/Program Files/CMake/share/cmake-3.19/Modules/CheckCSourceCompiles.cmake
+C:/Program Files/CMake/share/cmake-3.19/Modules/CheckIncludeFile.c.in
 C:/Program Files/CMake/share/cmake-3.19/Modules/CheckIncludeFile.cmake
 C:/Program Files/CMake/share/cmake-3.19/Modules/CheckLibraryExists.cmake
 C:/Program Files/CMake/share/cmake-3.19/Modules/FetchContent.cmake
@@ -8,5 +9,5 @@ C:/Program Files/CMake/share/cmake-3.19/Modules/FindPackageHandleStandardArgs.cm
 C:/Program Files/CMake/share/cmake-3.19/Modules/FindPackageMessage.cmake
 C:/Program Files/CMake/share/cmake-3.19/Modules/FindThreads.cmake
 C:/Program Files/CMake/share/cmake-3.19/Modules/Internal/CheckSourceCompiles.cmake
-C:/project/cppast_practice/cppast/CMakeLists.txt
-C:/project/cppast_practice/cppast/external/external.cmake
+C:/project/headertool/cppast/CMakeLists.txt
+C:/project/headertool/cppast/external/external.cmake

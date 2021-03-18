@@ -1,402 +1,402 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\project\cppast_practice\cppast\src\code_generator.cpp">
+    <ClCompile Include="C:\project\headertool\cppast\src\code_generator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\project\cppast_practice\cppast\src\cpp_alias_template.cpp">
+    <ClCompile Include="C:\project\headertool\cppast\src\cpp_alias_template.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\project\cppast_practice\cppast\src\cpp_attribute.cpp">
+    <ClCompile Include="C:\project\headertool\cppast\src\cpp_attribute.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\project\cppast_practice\cppast\src\cpp_class.cpp">
+    <ClCompile Include="C:\project\headertool\cppast\src\cpp_class.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\project\cppast_practice\cppast\src\cpp_class_template.cpp">
+    <ClCompile Include="C:\project\headertool\cppast\src\cpp_class_template.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\project\cppast_practice\cppast\src\cpp_entity.cpp">
+    <ClCompile Include="C:\project\headertool\cppast\src\cpp_entity.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\project\cppast_practice\cppast\src\cpp_entity_index.cpp">
+    <ClCompile Include="C:\project\headertool\cppast\src\cpp_entity_index.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\project\cppast_practice\cppast\src\cpp_entity_kind.cpp">
+    <ClCompile Include="C:\project\headertool\cppast\src\cpp_entity_kind.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\project\cppast_practice\cppast\src\cpp_enum.cpp">
+    <ClCompile Include="C:\project\headertool\cppast\src\cpp_enum.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\project\cppast_practice\cppast\src\cpp_expression.cpp">
+    <ClCompile Include="C:\project\headertool\cppast\src\cpp_expression.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\project\cppast_practice\cppast\src\cpp_file.cpp">
+    <ClCompile Include="C:\project\headertool\cppast\src\cpp_file.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\project\cppast_practice\cppast\src\cpp_forward_declarable.cpp">
+    <ClCompile Include="C:\project\headertool\cppast\src\cpp_forward_declarable.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\project\cppast_practice\cppast\src\cpp_friend.cpp">
+    <ClCompile Include="C:\project\headertool\cppast\src\cpp_friend.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\project\cppast_practice\cppast\src\cpp_function.cpp">
+    <ClCompile Include="C:\project\headertool\cppast\src\cpp_function.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\project\cppast_practice\cppast\src\cpp_function_template.cpp">
+    <ClCompile Include="C:\project\headertool\cppast\src\cpp_function_template.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\project\cppast_practice\cppast\src\cpp_language_linkage.cpp">
+    <ClCompile Include="C:\project\headertool\cppast\src\cpp_language_linkage.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\project\cppast_practice\cppast\src\cpp_member_function.cpp">
+    <ClCompile Include="C:\project\headertool\cppast\src\cpp_member_function.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\project\cppast_practice\cppast\src\cpp_member_variable.cpp">
+    <ClCompile Include="C:\project\headertool\cppast\src\cpp_member_variable.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\project\cppast_practice\cppast\src\cpp_namespace.cpp">
+    <ClCompile Include="C:\project\headertool\cppast\src\cpp_namespace.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\project\cppast_practice\cppast\src\cpp_preprocessor.cpp">
+    <ClCompile Include="C:\project\headertool\cppast\src\cpp_preprocessor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\project\cppast_practice\cppast\src\cpp_static_assert.cpp">
+    <ClCompile Include="C:\project\headertool\cppast\src\cpp_static_assert.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\project\cppast_practice\cppast\src\cpp_template_parameter.cpp">
+    <ClCompile Include="C:\project\headertool\cppast\src\cpp_template_parameter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\project\cppast_practice\cppast\src\cpp_token.cpp">
+    <ClCompile Include="C:\project\headertool\cppast\src\cpp_token.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\project\cppast_practice\cppast\src\cpp_type.cpp">
+    <ClCompile Include="C:\project\headertool\cppast\src\cpp_type.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\project\cppast_practice\cppast\src\cpp_type_alias.cpp">
+    <ClCompile Include="C:\project\headertool\cppast\src\cpp_type_alias.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\project\cppast_practice\cppast\src\cpp_variable.cpp">
+    <ClCompile Include="C:\project\headertool\cppast\src\cpp_variable.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\project\cppast_practice\cppast\src\cpp_variable_template.cpp">
+    <ClCompile Include="C:\project\headertool\cppast\src\cpp_variable_template.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\project\cppast_practice\cppast\src\diagnostic_logger.cpp">
+    <ClCompile Include="C:\project\headertool\cppast\src\diagnostic_logger.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\project\cppast_practice\cppast\src\visitor.cpp">
+    <ClCompile Include="C:\project\headertool\cppast\src\visitor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\project\cppast_practice\cppast\src\libclang\class_parser.cpp">
+    <ClCompile Include="C:\project\headertool\cppast\src\libclang\class_parser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\project\cppast_practice\cppast\src\libclang\cxtokenizer.cpp">
+    <ClCompile Include="C:\project\headertool\cppast\src\libclang\cxtokenizer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\project\cppast_practice\cppast\src\libclang\debug_helper.cpp">
+    <ClCompile Include="C:\project\headertool\cppast\src\libclang\debug_helper.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\project\cppast_practice\cppast\src\libclang\enum_parser.cpp">
+    <ClCompile Include="C:\project\headertool\cppast\src\libclang\enum_parser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\project\cppast_practice\cppast\src\libclang\expression_parser.cpp">
+    <ClCompile Include="C:\project\headertool\cppast\src\libclang\expression_parser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\project\cppast_practice\cppast\src\libclang\friend_parser.cpp">
+    <ClCompile Include="C:\project\headertool\cppast\src\libclang\friend_parser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\project\cppast_practice\cppast\src\libclang\function_parser.cpp">
+    <ClCompile Include="C:\project\headertool\cppast\src\libclang\function_parser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\project\cppast_practice\cppast\src\libclang\language_linkage_parser.cpp">
+    <ClCompile Include="C:\project\headertool\cppast\src\libclang\language_linkage_parser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\project\cppast_practice\cppast\src\libclang\libclang_parser.cpp">
+    <ClCompile Include="C:\project\headertool\cppast\src\libclang\libclang_parser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\project\cppast_practice\cppast\src\libclang\namespace_parser.cpp">
+    <ClCompile Include="C:\project\headertool\cppast\src\libclang\namespace_parser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\project\cppast_practice\cppast\src\libclang\parse_functions.cpp">
+    <ClCompile Include="C:\project\headertool\cppast\src\libclang\parse_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\project\cppast_practice\cppast\src\libclang\preprocessor.cpp">
+    <ClCompile Include="C:\project\headertool\cppast\src\libclang\preprocessor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\project\cppast_practice\cppast\src\libclang\template_parser.cpp">
+    <ClCompile Include="C:\project\headertool\cppast\src\libclang\template_parser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\project\cppast_practice\cppast\src\libclang\type_parser.cpp">
+    <ClCompile Include="C:\project\headertool\cppast\src\libclang\type_parser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\project\cppast_practice\cppast\src\libclang\variable_parser.cpp">
+    <ClCompile Include="C:\project\headertool\cppast\src\libclang\variable_parser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\project\cppast_practice\cppast\include\cppast\detail\assert.hpp">
+    <ClInclude Include="C:\project\headertool\cppast\include\cppast\detail\assert.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\cppast\include\cppast\detail\intrusive_list.hpp">
+    <ClInclude Include="C:\project\headertool\cppast\include\cppast\detail\intrusive_list.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\cppast\include\cppast\code_generator.hpp">
+    <ClInclude Include="C:\project\headertool\cppast\include\cppast\code_generator.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\cppast\include\cppast\compile_config.hpp">
+    <ClInclude Include="C:\project\headertool\cppast\include\cppast\compile_config.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\cppast\include\cppast\cpp_alias_template.hpp">
+    <ClInclude Include="C:\project\headertool\cppast\include\cppast\cpp_alias_template.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\cppast\include\cppast\cpp_array_type.hpp">
+    <ClInclude Include="C:\project\headertool\cppast\include\cppast\cpp_array_type.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\cppast\include\cppast\cpp_attribute.hpp">
+    <ClInclude Include="C:\project\headertool\cppast\include\cppast\cpp_attribute.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\cppast\include\cppast\cpp_class.hpp">
+    <ClInclude Include="C:\project\headertool\cppast\include\cppast\cpp_class.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\cppast\include\cppast\cpp_class_template.hpp">
+    <ClInclude Include="C:\project\headertool\cppast\include\cppast\cpp_class_template.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\cppast\include\cppast\cpp_decltype_type.hpp">
+    <ClInclude Include="C:\project\headertool\cppast\include\cppast\cpp_decltype_type.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\cppast\include\cppast\cpp_entity.hpp">
+    <ClInclude Include="C:\project\headertool\cppast\include\cppast\cpp_entity.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\cppast\include\cppast\cpp_entity_container.hpp">
+    <ClInclude Include="C:\project\headertool\cppast\include\cppast\cpp_entity_container.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\cppast\include\cppast\cpp_entity_index.hpp">
+    <ClInclude Include="C:\project\headertool\cppast\include\cppast\cpp_entity_index.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\cppast\include\cppast\cpp_entity_kind.hpp">
+    <ClInclude Include="C:\project\headertool\cppast\include\cppast\cpp_entity_kind.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\cppast\include\cppast\cpp_entity_ref.hpp">
+    <ClInclude Include="C:\project\headertool\cppast\include\cppast\cpp_entity_ref.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\cppast\include\cppast\cpp_enum.hpp">
+    <ClInclude Include="C:\project\headertool\cppast\include\cppast\cpp_enum.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\cppast\include\cppast\cpp_expression.hpp">
+    <ClInclude Include="C:\project\headertool\cppast\include\cppast\cpp_expression.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\cppast\include\cppast\cpp_file.hpp">
+    <ClInclude Include="C:\project\headertool\cppast\include\cppast\cpp_file.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\cppast\include\cppast\cpp_forward_declarable.hpp">
+    <ClInclude Include="C:\project\headertool\cppast\include\cppast\cpp_forward_declarable.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\cppast\include\cppast\cpp_friend.hpp">
+    <ClInclude Include="C:\project\headertool\cppast\include\cppast\cpp_friend.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\cppast\include\cppast\cpp_function.hpp">
+    <ClInclude Include="C:\project\headertool\cppast\include\cppast\cpp_function.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\cppast\include\cppast\cpp_function_template.hpp">
+    <ClInclude Include="C:\project\headertool\cppast\include\cppast\cpp_function_template.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\cppast\include\cppast\cpp_function_type.hpp">
+    <ClInclude Include="C:\project\headertool\cppast\include\cppast\cpp_function_type.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\cppast\include\cppast\cpp_language_linkage.hpp">
+    <ClInclude Include="C:\project\headertool\cppast\include\cppast\cpp_language_linkage.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\cppast\include\cppast\cpp_member_function.hpp">
+    <ClInclude Include="C:\project\headertool\cppast\include\cppast\cpp_member_function.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\cppast\include\cppast\cpp_member_variable.hpp">
+    <ClInclude Include="C:\project\headertool\cppast\include\cppast\cpp_member_variable.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\cppast\include\cppast\cpp_namespace.hpp">
+    <ClInclude Include="C:\project\headertool\cppast\include\cppast\cpp_namespace.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\cppast\include\cppast\cpp_preprocessor.hpp">
+    <ClInclude Include="C:\project\headertool\cppast\include\cppast\cpp_preprocessor.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\cppast\include\cppast\cpp_static_assert.hpp">
+    <ClInclude Include="C:\project\headertool\cppast\include\cppast\cpp_static_assert.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\cppast\include\cppast\cpp_storage_class_specifiers.hpp">
+    <ClInclude Include="C:\project\headertool\cppast\include\cppast\cpp_storage_class_specifiers.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\cppast\include\cppast\cpp_template.hpp">
+    <ClInclude Include="C:\project\headertool\cppast\include\cppast\cpp_template.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\cppast\include\cppast\cpp_template_parameter.hpp">
+    <ClInclude Include="C:\project\headertool\cppast\include\cppast\cpp_template_parameter.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\cppast\include\cppast\cpp_token.hpp">
+    <ClInclude Include="C:\project\headertool\cppast\include\cppast\cpp_token.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\cppast\include\cppast\cpp_type.hpp">
+    <ClInclude Include="C:\project\headertool\cppast\include\cppast\cpp_type.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\cppast\include\cppast\cpp_type_alias.hpp">
+    <ClInclude Include="C:\project\headertool\cppast\include\cppast\cpp_type_alias.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\cppast\include\cppast\cpp_variable.hpp">
+    <ClInclude Include="C:\project\headertool\cppast\include\cppast\cpp_variable.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\cppast\include\cppast\cpp_variable_base.hpp">
+    <ClInclude Include="C:\project\headertool\cppast\include\cppast\cpp_variable_base.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\cppast\include\cppast\cpp_variable_template.hpp">
+    <ClInclude Include="C:\project\headertool\cppast\include\cppast\cpp_variable_template.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\cppast\include\cppast\diagnostic.hpp">
+    <ClInclude Include="C:\project\headertool\cppast\include\cppast\diagnostic.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\cppast\include\cppast\diagnostic_logger.hpp">
+    <ClInclude Include="C:\project\headertool\cppast\include\cppast\diagnostic_logger.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\cppast\include\cppast\libclang_parser.hpp">
+    <ClInclude Include="C:\project\headertool\cppast\include\cppast\libclang_parser.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\cppast\include\cppast\parser.hpp">
+    <ClInclude Include="C:\project\headertool\cppast\include\cppast\parser.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\cppast\include\cppast\visitor.hpp">
+    <ClInclude Include="C:\project\headertool\cppast\include\cppast\visitor.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\cppast\src\libclang\cxtokenizer.hpp">
+    <ClInclude Include="C:\project\headertool\cppast\src\libclang\cxtokenizer.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\cppast\src\libclang\debug_helper.hpp">
+    <ClInclude Include="C:\project\headertool\cppast\src\libclang\debug_helper.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\cppast\src\libclang\libclang_visitor.hpp">
+    <ClInclude Include="C:\project\headertool\cppast\src\libclang\libclang_visitor.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\cppast\src\libclang\parse_error.hpp">
+    <ClInclude Include="C:\project\headertool\cppast\src\libclang\parse_error.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\cppast\src\libclang\parse_functions.hpp">
+    <ClInclude Include="C:\project\headertool\cppast\src\libclang\parse_functions.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\cppast\src\libclang\preprocessor.hpp">
+    <ClInclude Include="C:\project\headertool\cppast\src\libclang\preprocessor.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\cppast\src\libclang\raii_wrapper.hpp">
+    <ClInclude Include="C:\project\headertool\cppast\src\libclang\raii_wrapper.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\build\_deps\type_safe-src\include\type_safe\detail\aligned_union.hpp">
+    <ClInclude Include="C:\project\headertool\build\_deps\type_safe-src\include\type_safe\detail\aligned_union.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\build\_deps\type_safe-src\include\type_safe\detail\all_of.hpp">
+    <ClInclude Include="C:\project\headertool\build\_deps\type_safe-src\include\type_safe\detail\all_of.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\build\_deps\type_safe-src\include\type_safe\detail\assert.hpp">
+    <ClInclude Include="C:\project\headertool\build\_deps\type_safe-src\include\type_safe\detail\assert.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\build\_deps\type_safe-src\include\type_safe\detail\assign_or_construct.hpp">
+    <ClInclude Include="C:\project\headertool\build\_deps\type_safe-src\include\type_safe\detail\assign_or_construct.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\build\_deps\type_safe-src\include\type_safe\detail\constant_parser.hpp">
+    <ClInclude Include="C:\project\headertool\build\_deps\type_safe-src\include\type_safe\detail\constant_parser.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\build\_deps\type_safe-src\include\type_safe\detail\copy_move_control.hpp">
+    <ClInclude Include="C:\project\headertool\build\_deps\type_safe-src\include\type_safe\detail\copy_move_control.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\build\_deps\type_safe-src\include\type_safe\detail\force_inline.hpp">
+    <ClInclude Include="C:\project\headertool\build\_deps\type_safe-src\include\type_safe\detail\force_inline.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\build\_deps\type_safe-src\include\type_safe\detail\is_nothrow_swappable.hpp">
+    <ClInclude Include="C:\project\headertool\build\_deps\type_safe-src\include\type_safe\detail\is_nothrow_swappable.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\build\_deps\type_safe-src\include\type_safe\detail\map_invoke.hpp">
+    <ClInclude Include="C:\project\headertool\build\_deps\type_safe-src\include\type_safe\detail\map_invoke.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\build\_deps\type_safe-src\include\type_safe\detail\variant_impl.hpp">
+    <ClInclude Include="C:\project\headertool\build\_deps\type_safe-src\include\type_safe\detail\variant_impl.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\build\_deps\type_safe-src\include\type_safe\config.hpp">
+    <ClInclude Include="C:\project\headertool\build\_deps\type_safe-src\include\type_safe\config.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\build\_deps\type_safe-src\include\type_safe\arithmetic_policy.hpp">
+    <ClInclude Include="C:\project\headertool\build\_deps\type_safe-src\include\type_safe\arithmetic_policy.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\build\_deps\type_safe-src\include\type_safe\boolean.hpp">
+    <ClInclude Include="C:\project\headertool\build\_deps\type_safe-src\include\type_safe\boolean.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\build\_deps\type_safe-src\include\type_safe\bounded_type.hpp">
+    <ClInclude Include="C:\project\headertool\build\_deps\type_safe-src\include\type_safe\bounded_type.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\build\_deps\type_safe-src\include\type_safe\compact_optional.hpp">
+    <ClInclude Include="C:\project\headertool\build\_deps\type_safe-src\include\type_safe\compact_optional.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\build\_deps\type_safe-src\include\type_safe\constrained_type.hpp">
+    <ClInclude Include="C:\project\headertool\build\_deps\type_safe-src\include\type_safe\constrained_type.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\build\_deps\type_safe-src\include\type_safe\deferred_construction.hpp">
+    <ClInclude Include="C:\project\headertool\build\_deps\type_safe-src\include\type_safe\deferred_construction.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\build\_deps\type_safe-src\include\type_safe\downcast.hpp">
+    <ClInclude Include="C:\project\headertool\build\_deps\type_safe-src\include\type_safe\downcast.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\build\_deps\type_safe-src\include\type_safe\flag.hpp">
+    <ClInclude Include="C:\project\headertool\build\_deps\type_safe-src\include\type_safe\flag.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\build\_deps\type_safe-src\include\type_safe\flag_set.hpp">
+    <ClInclude Include="C:\project\headertool\build\_deps\type_safe-src\include\type_safe\flag_set.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\build\_deps\type_safe-src\include\type_safe\floating_point.hpp">
+    <ClInclude Include="C:\project\headertool\build\_deps\type_safe-src\include\type_safe\floating_point.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\build\_deps\type_safe-src\include\type_safe\index.hpp">
+    <ClInclude Include="C:\project\headertool\build\_deps\type_safe-src\include\type_safe\index.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\build\_deps\type_safe-src\include\type_safe\integer.hpp">
+    <ClInclude Include="C:\project\headertool\build\_deps\type_safe-src\include\type_safe\integer.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\build\_deps\type_safe-src\include\type_safe\narrow_cast.hpp">
+    <ClInclude Include="C:\project\headertool\build\_deps\type_safe-src\include\type_safe\narrow_cast.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\build\_deps\type_safe-src\include\type_safe\optional.hpp">
+    <ClInclude Include="C:\project\headertool\build\_deps\type_safe-src\include\type_safe\optional.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\build\_deps\type_safe-src\include\type_safe\optional_ref.hpp">
+    <ClInclude Include="C:\project\headertool\build\_deps\type_safe-src\include\type_safe\optional_ref.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\build\_deps\type_safe-src\include\type_safe\output_parameter.hpp">
+    <ClInclude Include="C:\project\headertool\build\_deps\type_safe-src\include\type_safe\output_parameter.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\build\_deps\type_safe-src\include\type_safe\reference.hpp">
+    <ClInclude Include="C:\project\headertool\build\_deps\type_safe-src\include\type_safe\reference.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\build\_deps\type_safe-src\include\type_safe\strong_typedef.hpp">
+    <ClInclude Include="C:\project\headertool\build\_deps\type_safe-src\include\type_safe\strong_typedef.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\build\_deps\type_safe-src\include\type_safe\tagged_union.hpp">
+    <ClInclude Include="C:\project\headertool\build\_deps\type_safe-src\include\type_safe\tagged_union.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\build\_deps\type_safe-src\include\type_safe\types.hpp">
+    <ClInclude Include="C:\project\headertool\build\_deps\type_safe-src\include\type_safe\types.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\build\_deps\type_safe-src\include\type_safe\variant.hpp">
+    <ClInclude Include="C:\project\headertool\build\_deps\type_safe-src\include\type_safe\variant.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\build\_deps\type_safe-src\include\type_safe\visitor.hpp">
+    <ClInclude Include="C:\project\headertool\build\_deps\type_safe-src\include\type_safe\visitor.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\project\cppast_practice\build\_deps\type_safe-src\external\debug_assert\debug_assert.hpp">
+    <ClInclude Include="C:\project\headertool\build\_deps\type_safe-src\external\debug_assert\debug_assert.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\project\cppast_practice\cppast\src\CMakeLists.txt" />
+    <CustomBuild Include="C:\project\headertool\cppast\src\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{EFDAAE10-EFEE-3F0B-9F30-2DD768618E08}</UniqueIdentifier>
+      <UniqueIdentifier>{D279CB4E-8009-315A-A53B-E21F70C11086}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{3A78AA16-4394-36F6-8752-9517296A823A}</UniqueIdentifier>
+      <UniqueIdentifier>{7475EC7D-8B20-3E28-B618-DD7AC02FE0D3}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

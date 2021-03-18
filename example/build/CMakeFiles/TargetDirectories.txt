@@ -1,3 +1,0 @@
-C:/project/cppast_practice/example/build/CMakeFiles/edit_cache.dir
-C:/project/cppast_practice/example/build/CMakeFiles/Practice.dir
-C:/project/cppast_practice/example/build/CMakeFiles/rebuild_cache.dir

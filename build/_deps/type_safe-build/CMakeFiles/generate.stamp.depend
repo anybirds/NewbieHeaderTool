@@ -2,5 +2,5 @@
 C:/Program Files/CMake/share/cmake-3.19/Modules/BasicConfigVersion-SameMajorVersion.cmake.in
 C:/Program Files/CMake/share/cmake-3.19/Modules/CMakePackageConfigHelpers.cmake
 C:/Program Files/CMake/share/cmake-3.19/Modules/WriteBasicConfigVersionFile.cmake
-C:/project/cppast_practice/build/_deps/type_safe-src/CMakeLists.txt
-C:/project/cppast_practice/build/_deps/type_safe-src/external/external.cmake
+C:/project/headertool/build/_deps/type_safe-src/CMakeLists.txt
+C:/project/headertool/build/_deps/type_safe-src/external/external.cmake

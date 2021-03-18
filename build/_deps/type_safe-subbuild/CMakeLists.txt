@@ -12,8 +12,8 @@ project(type_safe-populate NONE)
 include(ExternalProject)
 ExternalProject_Add(type_safe-populate
                      "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/foonathan/type_safe" "GIT_TAG" "origin/main"
-                    SOURCE_DIR          "C:/project/cppast_practice/build/_deps/type_safe-src"
-                    BINARY_DIR          "C:/project/cppast_practice/build/_deps/type_safe-build"
+                    SOURCE_DIR          "C:/project/headertool/build/_deps/type_safe-src"
+                    BINARY_DIR          "C:/project/headertool/build/_deps/type_safe-build"
                     CONFIGURE_COMMAND   ""
                     BUILD_COMMAND       ""
                     INSTALL_COMMAND     ""

@@ -1,8 +1,8 @@
-# Install script for directory: C:/project/cppast_practice/cppast/external/tpl
+# Install script for directory: C:/project/headertool/cppast/external/tpl
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files/cppast_practice")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files/headertool")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
