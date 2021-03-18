@@ -9,6 +9,9 @@
 /// [[generate::serialize]].
 
 #include <iostream>
+#include <fstream>
+#include <filesystem>
+#include <functional>
 
 #include <cppast/cpp_class.hpp>
 #include <cppast/cpp_member_variable.hpp>
@@ -153,6 +156,32 @@ void generate_serialize(const cppast::cpp_file& file)
 int main(int argc, char* argv[])
 {
     /* create compile_commands.json file to the specified directory given in argv[1]. use argv[2] as a directory to get files */
-    
+    std::string build_dir(argv[1]);
+    std::string src_dir(argv[2]);
+    std::ofstream fs(build_dir + "/compile_commands.json");
+    if (fs.fail()) {
+        std::cerr << "failed to open file compile_commands.json\n";
+    }
+    try {
+        using json = nlohmann::json;
+        json js;
+        std::function<void(const std::string &)> write = [&write, &js](const std::string &path) {
+            for (auto &e : std::filesystem::directory_iterator(path)) {
+                if (e.is_directory()) {
+                    write(e.path().string());
+                } else if (e.path().extension() == ".hpp") {
+                    json obj;
+                    obj["directory"] = path; 
+                    obj["command"] = "g++ -std=c++14 -D_DEBUG_FUNCTIONAL_MACHINERY -c " + e.path().string();
+                    obj["file"] = e.path().string();
+                    js.push_back(obj);
+                }
+            }
+        };
+        write(src_dir);
+        fs << js;
+        fs.flush();
+    } catch(...) {}
+
     return example_main(argc, argv, {}, generate_serialize);
 }

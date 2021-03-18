@@ -1,0 +1,1 @@
+[{"command":"g++ -std=c++14 -D_DEBUG_FUNCTIONAL_MACHINERY -c c:/project/headertool/sample/sample.hpp","directory":"c:/project/headertool/sample/","file":"c:/project/headertool/sample/sample.hpp"}]

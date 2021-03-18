@@ -15,35 +15,27 @@
 template <typename Callback>
 int example_main(int argc, char* argv[], const cppast::cpp_entity_index& index, Callback cb) try
 {
-    if (argc != 2)
+    cppast::libclang_compilation_database database(argv[1]); // the compilation database
+
+    // simple_file_parser allows parsing multiple files and stores the results for us
+    cppast::simple_file_parser<cppast::libclang_parser> parser(type_safe::ref(index));
+    try
     {
-        std::cerr << "usage: " << argv[0] << " <compile-commands-json-dir>\n";
+        cppast::parse_database(parser, database); // parse all files in the database
+    }
+    catch (cppast::libclang_error& ex)
+    {
+        std::cerr << "fatal libclang error: " << ex.what() << '\n';
         return 1;
     }
-    else
-    {
-        cppast::libclang_compilation_database database(argv[1]); // the compilation database
 
-        // simple_file_parser allows parsing multiple files and stores the results for us
-        cppast::simple_file_parser<cppast::libclang_parser> parser(type_safe::ref(index));
-        try
-        {
-            cppast::parse_database(parser, database); // parse all files in the database
-        }
-        catch (cppast::libclang_error& ex)
-        {
-            std::cerr << "fatal libclang error: " << ex.what() << '\n';
-            return 1;
-        }
+    if (parser.error())
+        // a non-fatal parse error
+        // error has been logged to stderr
+        return 1;
 
-        if (parser.error())
-            // a non-fatal parse error
-            // error has been logged to stderr
-            return 1;
-
-        for (auto& file : parser.files())
-            cb(file);
-    }
+    for (auto& file : parser.files())
+        cb(file);
 
     return 0;
 }
