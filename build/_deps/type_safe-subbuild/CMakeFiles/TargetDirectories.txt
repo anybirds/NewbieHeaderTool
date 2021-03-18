@@ -1,0 +1,3 @@
+C:/project/cppast_practice/build/_deps/type_safe-subbuild/CMakeFiles/type_safe-populate.dir
+C:/project/cppast_practice/build/_deps/type_safe-subbuild/CMakeFiles/ALL_BUILD.dir
+C:/project/cppast_practice/build/_deps/type_safe-subbuild/CMakeFiles/ZERO_CHECK.dir

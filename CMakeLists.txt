@@ -1,0 +1,24 @@
+cmake_minimum_required(VERSION 3.8)
+
+if (NOT DEFINED CMAKE_TOOLCHAIN_FILE)
+  set(CMAKE_TOOLCHAIN_FILE "C:/vcpkg/scripts/buildsystems/vcpkg.cmake" CACHE PATH "toolchain file")
+endif()
+
+project(headertool)
+
+find_package(nlohmann_json CONFIG REQUIRED)
+add_subdirectory(cppast)
+
+file(GLOB HEADERTOOL_SOURCE "serialize.cpp")
+
+add_executable(HeaderTool ${HEADERTOOL_SOURCE})
+
+target_link_libraries(HeaderTool PRIVATE cppast)
+target_include_directories(HeaderTool
+  PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}
+)
+set_target_properties(
+  HeaderTool PROPERTIES
+  CXX_STANDARD 17
+  CXX_STANDARD_REQUIRED ON
+)

@@ -1,0 +1,7 @@
+[
+{
+  "directory": "C:/project/cppast_practice/example/build",
+  "command": "g++ -std=c++14 -D_DEBUG_FUNCTIONAL_MACHINERY=1 -c C:/project/cppast_practice/example/example.cpp",
+  "file": "C:/project/cppast_practice/example/example.cpp"
+}
+]
