@@ -4,17 +4,17 @@
 using json = nlohmann::json;
 namespace User {
 template <typename T, std::enable_if_t<std::is_base_of_v<Engine::Entity, T>, bool> = true>
-Entity *instantiate() {
+Engine::Entity *instantiate() {
   return new T();
 }
 }
 namespace User {
 template <typename T, std::enable_if_t<std::is_base_of_v<Engine::Entity, T>, bool> = true>
-void serialize(json &js, const Entity *entity);
+void serialize(json &js, const Engine::Entity *entity);
 }
 namespace User {
 template <>
-void serialize<Error, true>(json &js, Entity *entity) {
+void serialize<Error, true>(json &js, Engine::Entity *entity) {
   const Error *e = (Error *)entity;
   to_json(js, e->id);
   to_json(js, e->name);
@@ -22,12 +22,12 @@ void serialize<Error, true>(json &js, Entity *entity) {
 }
 namespace User {
 template <typename T, std::enable_if_t<std::is_base_of_v<Engine::Entity, T>, bool> = true>
-void deserialize(const json &js, Entity *entity);
+void deserialize(const json &js, Engine::Entity *entity);
 }
 }
 namespace User {
 template <>
-void deserialize<Error, true>(const json &js, Entity *entity) {
+void deserialize<Error, true>(const json &js, Engine::Entity *entity) {
   Error *e = (Error *)entity;
   from_json(js, e->id);
   from_json(js, e->name);

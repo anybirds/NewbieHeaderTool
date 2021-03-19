@@ -53,13 +53,13 @@ void generate_serialize(const cppast::cpp_file& file, const std::string &name)
     /* instantiate function that creates the object of the type. */
     std::cout << "namespace " << name << " {\n";
     std::cout << "template <typename T, std::enable_if_t<std::is_base_of_v<Engine::Entity, T>, bool> = true>\n";
-    std::cout << "Entity *instantiate() {\n";
+    std::cout << "Engine::Entity *instantiate() {\n";
     std::cout << "  return new T();\n}\n}\n";
     
     /* serialize function that serializes the object. */
     std::cout << "namespace " << name << " {\n";
     std::cout << "template <typename T, std::enable_if_t<std::is_base_of_v<Engine::Entity, T>, bool> = true>\n";
-    std::cout << "void serialize(json &js, const Entity *entity);\n}\n";
+    std::cout << "void serialize(json &js, const Engine::Entity *entity);\n}\n";
     cppast::visit(file,
         [&name](const cppast::cpp_entity& e) {
             // only visit non-templated class definitions that have the attribute set
@@ -78,7 +78,7 @@ void generate_serialize(const cppast::cpp_file& file, const std::string &name)
                 auto& class_ = static_cast<const cppast::cpp_class&>(e);
 
                 std::cout << "template <>\n";
-                std::cout << "void serialize<" << class_.name() << ", true>(json &js, Entity *entity) {\n";
+                std::cout << "void serialize<" << class_.name() << ", true>(json &js, Engine::Entity *entity) {\n";
 
                 // serialize base classes
                 for (auto& base : class_.bases()) {
@@ -113,7 +113,7 @@ void generate_serialize(const cppast::cpp_file& file, const std::string &name)
     /* deserialize function that deserializes the object. */
     std::cout << "namespace " << name << " {\n";
     std::cout << "template <typename T, std::enable_if_t<std::is_base_of_v<Engine::Entity, T>, bool> = true>\n";
-    std::cout << "void deserialize(const json &js, Entity *entity);\n}\n}\n";
+    std::cout << "void deserialize(const json &js, Engine::Entity *entity);\n}\n}\n";
     cppast::visit(file,
         [&name](const cppast::cpp_entity& e) {
             // only visit non-templated class definitions that have the attribute set
@@ -132,7 +132,7 @@ void generate_serialize(const cppast::cpp_file& file, const std::string &name)
                 auto& class_ = static_cast<const cppast::cpp_class&>(e);
 
                 std::cout << "template <>\n";
-                std::cout << "void deserialize<" << class_.name() << ", true>(const json &js, Entity *entity) {\n";
+                std::cout << "void deserialize<" << class_.name() << ", true>(const json &js, Engine::Entity *entity) {\n";
 
                 // serialize base classes
                 for (auto& base : class_.bases()) {
