@@ -3,6 +3,7 @@
         "regex": "cpp",
         "xlocale": "cpp",
         "xlocmon": "cpp",
-        "optional": "cpp"
+        "optional": "cpp",
+        "filesystem": "cpp"
     }
 }
