@@ -2,6 +2,7 @@
 #include <fstream>
 #include <functional>
 #include <filesystem>
+#include <vector>
 
 #include <cppast/cpp_class.hpp>
 #include <cppast/cpp_member_variable.hpp>
@@ -22,12 +23,12 @@ void generate_serialize_member(std::ostream& out, const cppast::cpp_member_varia
 }
 
 // generate a deserialization call for a member
-void generate_deserialize_member(std::ostream& out, const cppast::cpp_member_variable& member, int index)
+void generate_deserialize_member(std::ostream& out, const cppast::cpp_member_variable& member)
 {
     auto& type = cppast::remove_cv(member.type());
 
     if (!cppast::has_attribute(member, "NoSerialize")) {
-        out << "  e->" << member.name() << " = js[" << index << "].get<" << cppast::to_string(type) << ">();\n";
+        out << "  e->" << member.name() << " = js.back().get<" << cppast::to_string(type) << ">(); js.erase(--js.end());\n";
     }
 }
 
@@ -90,26 +91,30 @@ void generate_deserialize(const cppast::cpp_file& file) {
                 auto& class_ = static_cast<const cppast::cpp_class&>(e);
 
                 std::cout << "template <>\n";
-                std::cout << "void Engine::deserialize<" << class_.name() << ", true>(const json &js, Engine::Entity *entity) {\n";
+                std::cout << "void Engine::deserialize<" << class_.name() << ", true>(json &js, Engine::Entity *entity) {\n";
+                
+                std::cout << "  " << class_.name() << " *e = (" << class_.name() << " *)entity;\n";
+                
+                // deserialize member variables
+                std::vector<const cppast::cpp_entity *> entities;
+                for (auto &member : class_)  {
+                    if (member.kind() == cppast::cpp_entity_kind::member_variable_t) {
+                        entities.push_back(&member);
+                    }
+                }
+                for (auto it = entities.rbegin(); it != entities.rend(); it++) {
+                    auto &member = **it;
+                    generate_deserialize_member(std::cout,
+                                                static_cast<
+                                                    const cppast::cpp_member_variable&>(
+                                                    member));
+                }
 
                 // deserialize base classes
                 for (auto& base : class_.bases()) {
                     if (cppast::has_attribute(base, "Serialize")) {
                         std::cout << "  deserialize<" << base.name() << ", true>(js, entity);\n";
                     }
-                }
-
-                std::cout << "  " << class_.name() << " *e = (" << class_.name() << " *)entity;\n";
-                
-                int index = 0;
-                // deserialize member variables
-                for (auto& member : class_)
-                {
-                    if (member.kind() == cppast::cpp_entity_kind::member_variable_t)
-                        generate_deserialize_member(std::cout,
-                                                static_cast<
-                                                    const cppast::cpp_member_variable&>(
-                                                    member), index++);
                 }
 
                 std::cout << "}\n";

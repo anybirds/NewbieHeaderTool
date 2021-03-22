@@ -26,6 +26,7 @@ void Engine::serialize<GameObject, true>(json &js, const Engine::Entity *entity)
 }
 template <>
 void Engine::serialize<Camera, true>(json &js, const Engine::Entity *entity) {
+  serialize<Component, true>(js, entity);
   const Camera *e = (const Camera *)entity;
   js.push_back(e->normalization);
   js.push_back(e->orthographic);
@@ -41,6 +42,7 @@ void Engine::serialize<Camera, true>(json &js, const Engine::Entity *entity) {
 }
 template <>
 void Engine::serialize<AMaterial, true>(json &js, const Engine::Entity *entity) {
+  serialize<Asset, true>(js, entity);
   const AMaterial *e = (const AMaterial *)entity;
   js.push_back(e->vertexShader);
   js.push_back(e->fragmentShader);
@@ -48,29 +50,34 @@ void Engine::serialize<AMaterial, true>(json &js, const Engine::Entity *entity) 
 }
 template <>
 void Engine::serialize<AMesh, true>(json &js, const Engine::Entity *entity) {
+  serialize<Asset, true>(js, entity);
   const AMesh *e = (const AMesh *)entity;
   js.push_back(e->amodel);
   js.push_back(e->index);
 }
 template <>
 void Engine::serialize<AModel, true>(json &js, const Engine::Entity *entity) {
+  serialize<Asset, true>(js, entity);
   const AModel *e = (const AModel *)entity;
   js.push_back(e->path);
 }
 template <>
 void Engine::serialize<Renderer, true>(json &js, const Engine::Entity *entity) {
+  serialize<Component, true>(js, entity);
   const Renderer *e = (const Renderer *)entity;
   js.push_back(e->mesh);
   js.push_back(e->material);
 }
 template <>
 void Engine::serialize<AShader, true>(json &js, const Engine::Entity *entity) {
+  serialize<Asset, true>(js, entity);
   const AShader *e = (const AShader *)entity;
   js.push_back(e->path);
   js.push_back(e->shaderType);
 }
 template <>
 void Engine::serialize<ATexture, true>(json &js, const Engine::Entity *entity) {
+  serialize<Asset, true>(js, entity);
   const ATexture *e = (const ATexture *)entity;
   js.push_back(e->path);
 }
@@ -95,10 +102,12 @@ void Engine::serialize<SceneSetting, true>(json &js, const Engine::Entity *entit
 }
 template <>
 void Engine::serialize<Script, true>(json &js, const Engine::Entity *entity) {
+  serialize<Component, true>(js, entity);
   const Script *e = (const Script *)entity;
 }
 template <>
 void Engine::serialize<Transform, true>(json &js, const Engine::Entity *entity) {
+  serialize<Component, true>(js, entity);
   const Transform *e = (const Transform *)entity;
   js.push_back(e->localPosition);
   js.push_back(e->localRotation);
@@ -110,108 +119,117 @@ void Engine::serialize<Transform, true>(json &js, const Engine::Entity *entity) 
   js.push_back(e->localToWorldMatrix);
 }
 template <>
-void Engine::deserialize<Asset, true>(const json &js, Engine::Entity *entity) {
+void Engine::deserialize<Asset, true>(json &js, Engine::Entity *entity) {
   Asset *e = (Asset *)entity;
-  e->name = js[0].get<std::string>();
+  e->name = js.back().get<std::string>(); js.erase(--js.end());
 }
 template <>
-void Engine::deserialize<Component, true>(const json &js, Engine::Entity *entity) {
+void Engine::deserialize<Component, true>(json &js, Engine::Entity *entity) {
   Component *e = (Component *)entity;
-  e->enabled = js[0].get<bool>();
-  e->gameObject = js[1].get<Engine::GameObject*>();
+  e->gameObject = js.back().get<Engine::GameObject*>(); js.erase(--js.end());
+  e->enabled = js.back().get<bool>(); js.erase(--js.end());
 }
 template <>
-void Engine::deserialize<GameObject, true>(const json &js, Engine::Entity *entity) {
+void Engine::deserialize<GameObject, true>(json &js, Engine::Entity *entity) {
   GameObject *e = (GameObject *)entity;
-  e->name = js[0].get<std::string>();
-  e->group = js[1].get<Engine::Group*>();
-  e->transform = js[2].get<Engine::Transform*>();
-  e->components = js[3].get<std::vector<Component *>>();
+  e->components = js.back().get<std::vector<Component *>>(); js.erase(--js.end());
+  e->transform = js.back().get<Engine::Transform*>(); js.erase(--js.end());
+  e->group = js.back().get<Engine::Group*>(); js.erase(--js.end());
+  e->name = js.back().get<std::string>(); js.erase(--js.end());
 }
 template <>
-void Engine::deserialize<Camera, true>(const json &js, Engine::Entity *entity) {
+void Engine::deserialize<Camera, true>(json &js, Engine::Entity *entity) {
   Camera *e = (Camera *)entity;
-  e->normalization = js[0].get<glm::mat4>();
-  e->orthographic = js[1].get<bool>();
-  e->fovy = js[2].get<float>();
-  e->width = js[3].get<float>();
-  e->height = js[4].get<float>();
-  e->nr = js[5].get<float>();
-  e->fr = js[6].get<float>();
-  e->left = js[7].get<float>();
-  e->right = js[8].get<float>();
-  e->bottom = js[9].get<float>();
-  e->top = js[10].get<float>();
+  e->top = js.back().get<float>(); js.erase(--js.end());
+  e->bottom = js.back().get<float>(); js.erase(--js.end());
+  e->right = js.back().get<float>(); js.erase(--js.end());
+  e->left = js.back().get<float>(); js.erase(--js.end());
+  e->fr = js.back().get<float>(); js.erase(--js.end());
+  e->nr = js.back().get<float>(); js.erase(--js.end());
+  e->height = js.back().get<float>(); js.erase(--js.end());
+  e->width = js.back().get<float>(); js.erase(--js.end());
+  e->fovy = js.back().get<float>(); js.erase(--js.end());
+  e->orthographic = js.back().get<bool>(); js.erase(--js.end());
+  e->normalization = js.back().get<glm::mat4>(); js.erase(--js.end());
+  deserialize<Component, true>(js, entity);
 }
 template <>
-void Engine::deserialize<AMaterial, true>(const json &js, Engine::Entity *entity) {
+void Engine::deserialize<AMaterial, true>(json &js, Engine::Entity *entity) {
   AMaterial *e = (AMaterial *)entity;
-  e->vertexShader = js[0].get<Engine::AShader*>();
-  e->fragmentShader = js[1].get<Engine::AShader*>();
-  e->mainTexture = js[2].get<Engine::ATexture*>();
+  e->mainTexture = js.back().get<Engine::ATexture*>(); js.erase(--js.end());
+  e->fragmentShader = js.back().get<Engine::AShader*>(); js.erase(--js.end());
+  e->vertexShader = js.back().get<Engine::AShader*>(); js.erase(--js.end());
+  deserialize<Asset, true>(js, entity);
 }
 template <>
-void Engine::deserialize<AMesh, true>(const json &js, Engine::Entity *entity) {
+void Engine::deserialize<AMesh, true>(json &js, Engine::Entity *entity) {
   AMesh *e = (AMesh *)entity;
-  e->amodel = js[0].get<Engine::AModel*>();
-  e->index = js[1].get<uint32_t>();
+  e->index = js.back().get<uint32_t>(); js.erase(--js.end());
+  e->amodel = js.back().get<Engine::AModel*>(); js.erase(--js.end());
+  deserialize<Asset, true>(js, entity);
 }
 template <>
-void Engine::deserialize<AModel, true>(const json &js, Engine::Entity *entity) {
+void Engine::deserialize<AModel, true>(json &js, Engine::Entity *entity) {
   AModel *e = (AModel *)entity;
-  e->path = js[0].get<std::string>();
+  e->path = js.back().get<std::string>(); js.erase(--js.end());
+  deserialize<Asset, true>(js, entity);
 }
 template <>
-void Engine::deserialize<Renderer, true>(const json &js, Engine::Entity *entity) {
+void Engine::deserialize<Renderer, true>(json &js, Engine::Entity *entity) {
   Renderer *e = (Renderer *)entity;
-  e->mesh = js[0].get<std::shared_ptr<Mesh>>();
-  e->material = js[1].get<std::shared_ptr<Material>>();
+  e->material = js.back().get<std::shared_ptr<Material>>(); js.erase(--js.end());
+  e->mesh = js.back().get<std::shared_ptr<Mesh>>(); js.erase(--js.end());
+  deserialize<Component, true>(js, entity);
 }
 template <>
-void Engine::deserialize<AShader, true>(const json &js, Engine::Entity *entity) {
+void Engine::deserialize<AShader, true>(json &js, Engine::Entity *entity) {
   AShader *e = (AShader *)entity;
-  e->path = js[0].get<std::string>();
-  e->shaderType = js[1].get<uint16_t>();
+  e->shaderType = js.back().get<uint16_t>(); js.erase(--js.end());
+  e->path = js.back().get<std::string>(); js.erase(--js.end());
+  deserialize<Asset, true>(js, entity);
 }
 template <>
-void Engine::deserialize<ATexture, true>(const json &js, Engine::Entity *entity) {
+void Engine::deserialize<ATexture, true>(json &js, Engine::Entity *entity) {
   ATexture *e = (ATexture *)entity;
-  e->path = js[0].get<std::string>();
+  e->path = js.back().get<std::string>(); js.erase(--js.end());
+  deserialize<Asset, true>(js, entity);
 }
 template <>
-void Engine::deserialize<Group, true>(const json &js, Engine::Entity *entity) {
+void Engine::deserialize<Group, true>(json &js, Engine::Entity *entity) {
   Group *e = (Group *)entity;
-  e->gameObjects = js[0].get<std::vector<GameObject *>>();
-  e->ibehaviors = js[1].get<std::vector<Component *>>();
-  e->irenders = js[2].get<std::vector<Component *>>();
-  e->idraws = js[3].get<std::vector<Component *>>();
+  e->idraws = js.back().get<std::vector<Component *>>(); js.erase(--js.end());
+  e->irenders = js.back().get<std::vector<Component *>>(); js.erase(--js.end());
+  e->ibehaviors = js.back().get<std::vector<Component *>>(); js.erase(--js.end());
+  e->gameObjects = js.back().get<std::vector<GameObject *>>(); js.erase(--js.end());
 }
 template <>
-void Engine::deserialize<ProjectSetting, true>(const json &js, Engine::Entity *entity) {
+void Engine::deserialize<ProjectSetting, true>(json &js, Engine::Entity *entity) {
   ProjectSetting *e = (ProjectSetting *)entity;
-  e->serial = js[0].get<uint64_t>();
-  e->startSceneName = js[1].get<std::string>();
+  e->startSceneName = js.back().get<std::string>(); js.erase(--js.end());
+  e->serial = js.back().get<uint64_t>(); js.erase(--js.end());
 }
 template <>
-void Engine::deserialize<SceneSetting, true>(const json &js, Engine::Entity *entity) {
+void Engine::deserialize<SceneSetting, true>(json &js, Engine::Entity *entity) {
   SceneSetting *e = (SceneSetting *)entity;
-  e->mainCamera = js[0].get<Engine::Camera*>();
+  e->mainCamera = js.back().get<Engine::Camera*>(); js.erase(--js.end());
 }
 template <>
-void Engine::deserialize<Script, true>(const json &js, Engine::Entity *entity) {
+void Engine::deserialize<Script, true>(json &js, Engine::Entity *entity) {
   Script *e = (Script *)entity;
+  deserialize<Component, true>(js, entity);
 }
 template <>
-void Engine::deserialize<Transform, true>(const json &js, Engine::Entity *entity) {
+void Engine::deserialize<Transform, true>(json &js, Engine::Entity *entity) {
   Transform *e = (Transform *)entity;
-  e->localPosition = js[0].get<glm::vec3>();
-  e->localRotation = js[1].get<glm::quat>();
-  e->localScale = js[2].get<glm::vec3>();
-  e->localEulerAngles = js[3].get<glm::vec3>();
-  e->parent = js[4].get<Engine::Transform*>();
-  e->children = js[5].get<std::vector<Transform *>>();
-  e->updated = js[6].get<bool>();
-  e->localToWorldMatrix = js[7].get<glm::mat4>();
+  e->localToWorldMatrix = js.back().get<glm::mat4>(); js.erase(--js.end());
+  e->updated = js.back().get<bool>(); js.erase(--js.end());
+  e->children = js.back().get<std::vector<Transform *>>(); js.erase(--js.end());
+  e->parent = js.back().get<Engine::Transform*>(); js.erase(--js.end());
+  e->localEulerAngles = js.back().get<glm::vec3>(); js.erase(--js.end());
+  e->localScale = js.back().get<glm::vec3>(); js.erase(--js.end());
+  e->localRotation = js.back().get<glm::quat>(); js.erase(--js.end());
+  e->localPosition = js.back().get<glm::vec3>(); js.erase(--js.end());
+  deserialize<Component, true>(js, entity);
 }
 void type_init() {
   Asset::StaticType(new Type("Asset", instantiate<Asset, true>, serialize<Asset, true>, deserialize<Asset, true>));
