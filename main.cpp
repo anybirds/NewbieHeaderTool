@@ -32,7 +32,7 @@ void generate_deserialize_member(std::ostream& out, const cppast::cpp_member_var
 }
 
 // generate serialization function
-void generate_serialize(const cppast::cpp_file& file, const std::string &name)
+void generate_serialize(const cppast::cpp_file& file)
 {
     cppast::visit(file,
         [](const cppast::cpp_entity& e) {
@@ -42,7 +42,7 @@ void generate_serialize(const cppast::cpp_file& file, const std::string &name)
                     && cppast::is_definition(e)
                     && cppast::has_attribute(e, "Serialize"));
         },
-        [&name](const cppast::cpp_entity& e, const cppast::visitor_info& info) {
+        [](const cppast::cpp_entity& e, const cppast::visitor_info& info) {
             if (e.kind() == cppast::cpp_entity_kind::class_t && !info.is_old_entity())
             {
                 auto& class_ = static_cast<const cppast::cpp_class&>(e);
@@ -75,7 +75,7 @@ void generate_serialize(const cppast::cpp_file& file, const std::string &name)
 }
 
 // generate deserialization function
-void generate_deserialize(const cppast::cpp_file& file, const std::string &name) {
+void generate_deserialize(const cppast::cpp_file& file) {
     cppast::visit(file,
         [](const cppast::cpp_entity& e) {
             // only visit non-templated class definitions that have the attribute set
@@ -84,7 +84,7 @@ void generate_deserialize(const cppast::cpp_file& file, const std::string &name)
                     && cppast::is_definition(e)
                     && cppast::has_attribute(e, "Serialize"));
         },
-        [&name](const cppast::cpp_entity& e, const cppast::visitor_info& info) {
+        [](const cppast::cpp_entity& e, const cppast::visitor_info& info) {
             if (e.kind() == cppast::cpp_entity_kind::class_t && !info.is_old_entity())
             {
                 auto& class_ = static_cast<const cppast::cpp_class&>(e);
@@ -118,7 +118,7 @@ void generate_deserialize(const cppast::cpp_file& file, const std::string &name)
 }
 
 // generate type_init function
-void generate_typeinit(const cppast::cpp_file& file, const std::string &name) {
+void generate_typeinit(const cppast::cpp_file& file) {
     cppast::visit(file,
         [](const cppast::cpp_entity& e) {
             // only visit non-templated class definitions that have the attribute set
@@ -127,22 +127,42 @@ void generate_typeinit(const cppast::cpp_file& file, const std::string &name) {
                     && cppast::is_definition(e)
                     && cppast::has_attribute(e, "Serialize"));
         },
-        [&name](const cppast::cpp_entity& e, const cppast::visitor_info& info) {
+        [](const cppast::cpp_entity& e, const cppast::visitor_info& info) {
             if (e.kind() == cppast::cpp_entity_kind::class_t && !info.is_old_entity())
             {
                 auto& class_ = static_cast<const cppast::cpp_class&>(e);
                 
-                std::cout << "  " << class_.name() << "::type = new Type(\""
+                std::cout << "  " << class_.name() << "::StaticType(new Type(\""
                 << class_.name() << "\", "
                 << "instantiate<" << class_.name() << ", true>, "
                 << "serialize<" << class_.name() << ", true>, "
-                << "deserialize<" << class_.name() << ", true>);\n";
+                << "deserialize<" << class_.name() << ", true>));\n";
+            }
+        });
+}
+
+// generate type_clear function
+void generate_typeclear(const cppast::cpp_file& file) {
+    cppast::visit(file,
+        [](const cppast::cpp_entity& e) {
+            // only visit non-templated class definitions that have the attribute set
+            return (!cppast::is_templated(e)
+                    && e.kind() == cppast::cpp_entity_kind::class_t
+                    && cppast::is_definition(e)
+                    && cppast::has_attribute(e, "Serialize"));
+        },
+        [](const cppast::cpp_entity& e, const cppast::visitor_info& info) {
+            if (e.kind() == cppast::cpp_entity_kind::class_t && !info.is_old_entity())
+            {
+                auto& class_ = static_cast<const cppast::cpp_class&>(e);
+                
+                std::cout << "  delete " << class_.name() << "::StaticType();\n";
             }
         });
 }
 
 template <typename Callback>
-int example_main(int argc, char* argv[], const cppast::cpp_entity_index& index, Callback sc, Callback dc, Callback tc) try
+int example_main(int argc, char* argv[], const cppast::cpp_entity_index& index, Callback sc, Callback dc, Callback ic, Callback cc) try
 {
     cppast::libclang_compilation_database database(argv[1]); // the compilation database
 
@@ -163,19 +183,23 @@ int example_main(int argc, char* argv[], const cppast::cpp_entity_index& index, 
         // error has been logged to stderr
         return 1;
 
-    std::string name(argv[3]);
-    for (auto& file : parser.files())
-        sc(file, name);
-    for (auto& file : parser.files())
-        dc(file, name);
+    for (auto &file : parser.files())
+        sc(file);
+    for (auto &file : parser.files())
+        dc(file);
 
-    /* type_init function that creates Type object for all types. */
+    /* type_init function that creates Type objects. */
     std::cout << "void type_init() {\n";
-    std::cout << "  using namespace " << name << ";\n";
     for (auto& file : parser.files())
-        tc(file, name);
+        ic(file);
     std::cout << "}\n";
-
+    
+    /* type_clear function that clear Type objects. */
+    std::cout << "void type_clear() {\n";
+    for (auto& file : parser.files())
+        cc(file);
+    std::cout << "}\n";
+    
     return 0;
 }
 catch (std::exception& ex)
@@ -211,7 +235,11 @@ int main(int argc, char* argv[])
                     json obj;
                     std::string header = src_dir + "/" + relative + p.path().filename().string();
                     obj["directory"] = build_dir; 
-                    obj["command"] = "g++ -DGLFW_DLL -DJSON_USE_IMPLICIT_CONVERSIONS=1 -isystem C:/vcpkg/installed/x64-windows/include -isystem C:/vcpkg/installed/x64-windows/include/utf8cpp -isystem C:/vcpkg/installed/x64-windows/include/irrlicht -isystem C:/vcpkg/installed/x64-windows/include/kubazip -isystem C:/vcpkg/installed/x64-windows/include/poly2tri -std=c++1z -D_DEBUG_FUNCTIONAL_MACHINERY -I" + src_dir + " -c " + header;
+#if defined(_MSC_VER) || defined(WIN64) || defined(_WIN64) || defined(__WIN64__) || defined(WIN32) || defined(_WIN32) || defined(__WIN32__) || defined(__NT__)
+                    obj["command"] = "g++ -DGLFW_DLL -DJSON_USE_IMPLICIT_CONVERSIONS=1 -isystem C:/vcpkg/installed/x64-windows/include -isystem C:/vcpkg/installed/x64-windows/include/utf8cpp -isystem C:/vcpkg/installed/x64-windows/include/irrlicht -isystem C:/vcpkg/installed/x64-windows/include/kubazip -isystem C:/vcpkg/installed/x64-windows/include/poly2tri -std=c++1z -D_DEBUG_FUNCTIONAL_MACHINERY -IC:/Newbie/Engine -I" + src_dir + " -c " + header;
+#else
+                    obj["command"] = "g++ -DGLFW_DLL -DJSON_USE_IMPLICIT_CONVERSIONS=1 -isystem /vcpkg/installed/x64-windows/include -isystem /vcpkg/installed/x64-windows/include/utf8cpp -isystem /vcpkg/installed/x64-windows/include/irrlicht -isystem /vcpkg/installed/x64-windows/include/kubazip -isystem /vcpkg/installed/x64-windows/include/poly2tri -std=c++1z -D_DEBUG_FUNCTIONAL_MACHINERY -I/Newbie/Engine -I" + src_dir + " -c " + header;
+#endif
                     obj["file"] = header;
                     js.push_back(obj); 
 
@@ -234,5 +262,5 @@ int main(int argc, char* argv[])
     std::cout << "using namespace glm;\n";
     std::cout << "using namespace Engine;\n";   
 
-    return example_main(argc, argv, {}, generate_serialize, generate_deserialize, generate_typeinit);
+    return example_main(argc, argv, {}, generate_serialize, generate_deserialize, generate_typeinit, generate_typeclear);
 }

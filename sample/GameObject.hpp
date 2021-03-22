@@ -58,13 +58,13 @@ namespace Engine {
             component->gameObject = this;
             components.push_back(component); 
             if (std::is_base_of_v<IBehavior, T>) {
-                group->ibehaviors.push_back((IBehavior *)component);
+                group->ibehaviors.push_back((Component *)component);
             }
             if (std::is_base_of_v<IRender, T>) {
-                group->irenders.push_back((IRender *)component);   
+                group->irenders.push_back((Component *)component);   
             }
             if (std::is_base_of_v<IDraw, T>) {
-                group->idraws.push_back((IDraw *)component);
+                group->idraws.push_back((Component *)component);
             }
             return component;
         }
@@ -74,10 +74,5 @@ namespace Engine {
 
         friend class Group;
         friend class Scene;
-        
-        template <typename T, std::enable_if_t<std::is_base_of_v<Engine::Entity, T>, bool>>
-        friend void serialize(nlohmann::json &, const Entity *);
-        template <typename T, std::enable_if_t<std::is_base_of_v<Engine::Entity, T>, bool>>
-        friend void deserialize(const nlohmann::json &, Entity *);
     };
 }

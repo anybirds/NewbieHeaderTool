@@ -17,7 +17,6 @@ namespace Engine {
         static std::unordered_map<uint64_t, Entity *> temp;
 
     private:
-        [[NoSerialize]]
         bool removed;
 
     public:
