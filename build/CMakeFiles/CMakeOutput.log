@@ -9,7 +9,7 @@ The output was:
 .NET Framework용 Microsoft (R) Build Engine 버전 15.9.21+g9802d43bc3
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-빌드 시작: 2021-03-22 오후 9:20:15
+빌드 시작: 2021-03-24 오전 12:11:39
 1 노드의 "C:\project\headertool\build\CMakeFiles\3.19.6\CompilerIdC\CompilerIdC.vcxproj" 프로젝트(기본 대상)입니다.
 PrepareForBuild:
   "Debug\" 디렉터리를 만들고 있습니다.
@@ -39,7 +39,7 @@ FinalizeBuildStatus:
     경고 0개
     오류 0개
 
-경과 시간: 00:00:02.12
+경과 시간: 00:00:04.86
 
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -58,7 +58,7 @@ The output was:
 .NET Framework용 Microsoft (R) Build Engine 버전 15.9.21+g9802d43bc3
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-빌드 시작: 2021-03-22 오후 9:20:18
+빌드 시작: 2021-03-24 오전 12:11:45
 1 노드의 "C:\project\headertool\build\CMakeFiles\3.19.6\CompilerIdCXX\CompilerIdCXX.vcxproj" 프로젝트(기본 대상)입니다.
 PrepareForBuild:
   "Debug\" 디렉터리를 만들고 있습니다.
@@ -88,7 +88,7 @@ FinalizeBuildStatus:
     경고 0개
     오류 0개
 
-경과 시간: 00:00:01.82
+경과 시간: 00:00:04.12
 
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -100,32 +100,32 @@ The CXX compiler identification is MSVC, found in "C:/project/headertool/build/C
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: C:/project/headertool/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/MSBuild/15.0/Bin/MSBuild.exe cmTC_f633f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m && .NET Framework용 Microsoft (R) Build Engine 버전 15.9.21+g9802d43bc3
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/MSBuild/15.0/Bin/MSBuild.exe cmTC_fbd7f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m && .NET Framework용 Microsoft (R) Build Engine 버전 15.9.21+g9802d43bc3
 Copyright (C) Microsoft Corporation. All rights reserved.
 
   Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
   Copyright (C) Microsoft Corporation.  All rights reserved.
   
-  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f633f.dir\Debug\\" /Fd"cmTC_f633f.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeCCompilerABI.c"
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_fbd7f.dir\Debug\\" /Fd"cmTC_fbd7f.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeCCompilerABI.c"
   CMakeCCompilerABI.c
   
-  cmTC_f633f.vcxproj -> C:\project\headertool\build\CMakeFiles\CMakeTmp\Debug\cmTC_f633f.exe
+  cmTC_fbd7f.vcxproj -> C:\project\headertool\build\CMakeFiles\CMakeTmp\Debug\cmTC_fbd7f.exe
 
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: C:/project/headertool/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/MSBuild/15.0/Bin/MSBuild.exe cmTC_ccdbf.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m && .NET Framework용 Microsoft (R) Build Engine 버전 15.9.21+g9802d43bc3
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/MSBuild/15.0/Bin/MSBuild.exe cmTC_20e23.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=15.0 /v:m && .NET Framework용 Microsoft (R) Build Engine 버전 15.9.21+g9802d43bc3
 Copyright (C) Microsoft Corporation. All rights reserved.
 
   Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
   Copyright (C) Microsoft Corporation.  All rights reserved.
   
-  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_ccdbf.dir\Debug\\" /Fd"cmTC_ccdbf.dir\Debug\vc141.pdb" /Gd /TP /errorReport:queue "C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeCXXCompilerABI.cpp"
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_20e23.dir\Debug\\" /Fd"cmTC_20e23.dir\Debug\vc141.pdb" /Gd /TP /errorReport:queue "C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeCXXCompilerABI.cpp"
   CMakeCXXCompilerABI.cpp
   
-  cmTC_ccdbf.vcxproj -> C:\project\headertool\build\CMakeFiles\CMakeTmp\Debug\cmTC_ccdbf.exe
+  cmTC_20e23.vcxproj -> C:\project\headertool\build\CMakeFiles\CMakeTmp\Debug\cmTC_20e23.exe
 
 
 

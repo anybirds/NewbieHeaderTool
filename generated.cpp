@@ -8,6 +8,7 @@ using namespace Engine;
 template <>
 void Engine::serialize<Asset, true>(json &js, const Engine::Entity *entity) {
   const Asset *e = (const Asset *)entity;
+  js.push_back(e->serial);
   js.push_back(e->name);
 }
 template <>
@@ -122,6 +123,7 @@ template <>
 void Engine::deserialize<Asset, true>(json &js, Engine::Entity *entity) {
   Asset *e = (Asset *)entity;
   e->name = js.back().get<std::string>(); js.erase(--js.end());
+  e->serial = js.back().get<uint64_t>(); js.erase(--js.end());
 }
 template <>
 void Engine::deserialize<Component, true>(json &js, Engine::Entity *entity) {
@@ -197,9 +199,9 @@ void Engine::deserialize<ATexture, true>(json &js, Engine::Entity *entity) {
 template <>
 void Engine::deserialize<Group, true>(json &js, Engine::Entity *entity) {
   Group *e = (Group *)entity;
-  e->idraws = js.back().get<std::vector<Component *>>(); js.erase(--js.end());
-  e->irenders = js.back().get<std::vector<Component *>>(); js.erase(--js.end());
-  e->ibehaviors = js.back().get<std::vector<Component *>>(); js.erase(--js.end());
+  e->idraws = js.back().get<std::vector<IDraw *>>(); js.erase(--js.end());
+  e->irenders = js.back().get<std::vector<IRender *>>(); js.erase(--js.end());
+  e->ibehaviors = js.back().get<std::vector<IBehavior *>>(); js.erase(--js.end());
   e->gameObjects = js.back().get<std::vector<GameObject *>>(); js.erase(--js.end());
 }
 template <>

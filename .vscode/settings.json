@@ -4,6 +4,8 @@
         "xlocale": "cpp",
         "xlocmon": "cpp",
         "optional": "cpp",
-        "filesystem": "cpp"
+        "filesystem": "cpp",
+        "system_error": "cpp",
+        "stdexcept": "cpp"
     }
 }

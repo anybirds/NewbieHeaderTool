@@ -15,6 +15,7 @@
 #include <Group.hpp>
 #include <IBehavior.hpp>
 #include <IDraw.hpp>
+#include <Interface.hpp>
 #include <IRender.hpp>
 #include <Project.hpp>
 #include <Resource.hpp>

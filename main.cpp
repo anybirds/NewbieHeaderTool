@@ -267,5 +267,19 @@ int main(int argc, char* argv[])
     std::cout << "using namespace glm;\n";
     std::cout << "using namespace Engine;\n";   
 
+    /* users can define classes that derives component */
+    if (module_name == "User") {
+        std::cout << "template <>\n";
+        std::cout << "void Engine::serialize<Component, true>(json &js, const Engine::Entity *entity) {\n";
+        std::cout << "  const Component *e = (const Component *)entity;\n";
+        std::cout << "  js.push_back(e->enabled);\n";
+        std::cout << "  js.push_back(e->gameObject);\n}\n";
+        std::cout << "template <>\n";
+        std::cout << "void Engine::deserialize<Component, true>(json &js, Engine::Entity *entity) {\n";
+        std::cout << "  Component *e = (Component *)entity;\n";
+        std::cout << "  e->gameObject = js.back().get<Engine::GameObject*>(); js.erase(--js.end());\n";
+        std::cout << "  e->enabled = js.back().get<bool>(); js.erase(--js.end());\n}\n";
+    }
+
     return example_main(argc, argv, {}, generate_serialize, generate_deserialize, generate_typeinit, generate_typeclear);
 }
