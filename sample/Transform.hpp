@@ -1,12 +1,11 @@
 #pragma once 
 
-#include <vector>
+#include <unordered_set>
 #include <glm/glm.hpp>
 #include <glm/gtx/quaternion.hpp>
 
 #include <EngineExport.hpp>
 #include <Component.hpp>
-#include <Type.hpp>
 
 namespace Engine {	
 
@@ -23,24 +22,25 @@ namespace Engine {
         glm::vec3 localEulerAngles;
 
         Transform *parent;
-        std::vector<Transform *> children;
+        std::unordered_set<Transform *> children;
 
-        mutable bool updated;
+        [[NoSerialize]]
+        std::unordered_set<Transform *> garbages;
+
+        mutable bool dirty;
         mutable glm::mat4 localToWorldMatrix;
 
         void PropagateUpdate();
 
     public:
-        Transform() : localRotation(1.0f, 0.0f, 0.0f, 0.0f), localToWorldMatrix(glm::mat4(1.0f)) {}
-
-        virtual void SetRemoved() override;
+        Transform() : localRotation(1.0f, 0.0f, 0.0f, 0.0f), localToWorldMatrix(glm::mat4(1.0f)), dirty(false) {}
 
         const glm::vec3 &GetLocalPosition() const { return localPosition; }
         const glm::quat &GetLocalRotation() const { return localRotation; }
         const glm::vec3 &GetLocalScale() const { return localScale; }
         const glm::vec3 &GetLocalEulerAngles() const { return localEulerAngles; }
         Transform *GetParent() const { return parent; }
-        const std::vector<Transform *> &GetChildren() const { return children; }
+        const std::unordered_set<Transform *> &GetChildren() const { return children; }
 
         glm::mat4 GetLocalToWorldMatrix() const;
         glm::mat4 GetWorldToLocalMatrix() const;
@@ -61,5 +61,6 @@ namespace Engine {
         void RotateAround(const glm::vec3 &axis, float angle);
 
         friend class Scene;
+        friend class GameObject;
 	};
 }

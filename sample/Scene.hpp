@@ -1,7 +1,7 @@
 #pragma once
 
 #include <string>
-#include <list>
+#include <unordered_set>
 
 #include <Entity.hpp>
 #include <Asset.hpp>
@@ -30,7 +30,7 @@ namespace Engine {
     class ENGINE_EXPORT Scene final {
     public:
         static Scene &GetInstance() { static Scene scene; return scene; }  
-        static bool Load(const std::string &name);
+        static bool Load(int index);
         static bool Save();
         static void Close();
 
@@ -38,8 +38,11 @@ namespace Engine {
         Scene() {}
 
         std::string name;
+        std::string path;
         SceneSetting *setting;
-        std::list<Group *> groups;
+        std::unordered_set<Group *> groups;
+
+        std::unordered_set<Group *> garbages;
         
     public:
         Scene(const Scene &) = delete;
@@ -47,11 +50,14 @@ namespace Engine {
 
         Group *AddGroup();
         void RemoveGroup(Group *group);
-        GameObject *GetGameObject(const std::string &name);
+        GameObject *FindGameObject(const std::string &name);
+        SceneSetting *GetSettiing() { return setting; }
         
         void Start();
+        void Refresh();
         void Update();
         void Render();
+        void Delete();
 
         friend class Group;
     };

@@ -41,26 +41,22 @@ void generate_serialize(const cppast::cpp_file& file)
             return (!cppast::is_templated(e)
                     && e.kind() == cppast::cpp_entity_kind::class_t
                     && cppast::is_definition(e)
-                    && cppast::has_attribute(e, "Serialize"));
+                    && cppast::has_attribute(e, "Serialize"))
+                    // or all namespaces
+                    || e.kind() == cppast::cpp_entity_kind::namespace_t;
         },
         [](const cppast::cpp_entity& e, const cppast::visitor_info& info) {
             if (e.kind() == cppast::cpp_entity_kind::class_t && !info.is_old_entity())
             {
                 auto& class_ = static_cast<const cppast::cpp_class&>(e);
 
-                std::cout << "template <>\n";
-                std::cout << "void Engine::serialize<" << class_.name() << ", true>(json &js, const Engine::Entity *entity) {\n";
+                std::cout << "void " << class_.name() << "::Serialize(json &js, const Engine::Entity *entity) {\n";
 
-                // serialize base classes
-                for (auto& base : class_.bases()) {
-                    if (cppast::has_attribute(base, "Serialize")) {
-                        std::cout << "  serialize<" << base.name() << ", true>(js, entity);\n";
-                    }
-                }
-
-                std::cout << "  const " << class_.name() << " *e = (const " << class_.name() << " *)entity;\n";                
+                // serialize the base class
+                std::cout << "  " << (*class_.bases().begin()).name() << "::StaticType()->Serialize(js, entity);\n";
                 
                 // serialize member variables
+                std::cout << "  const " << class_.name() << " *e = (const " << class_.name() << " *)entity;\n";
                 for (auto& member : class_)
                 {
                     if (member.kind() == cppast::cpp_entity_kind::member_variable_t)
@@ -71,6 +67,13 @@ void generate_serialize(const cppast::cpp_file& file)
                 }
 
                 std::cout << "}\n";
+            } else if (e.kind() == cppast::cpp_entity_kind::namespace_t) {
+                if (info.event == cppast::visitor_info::container_entity_enter)
+                    // open namespace
+                    std::cout << "namespace " << e.name() << " {\n";
+                else // if (info.event == cppast::visitor_info::container_entity_exit)
+                    // close namespace
+                    std::cout << "}\n";
             }
         });   
 }
@@ -83,19 +86,19 @@ void generate_deserialize(const cppast::cpp_file& file) {
             return (!cppast::is_templated(e)
                     && e.kind() == cppast::cpp_entity_kind::class_t
                     && cppast::is_definition(e)
-                    && cppast::has_attribute(e, "Serialize"));
+                    && cppast::has_attribute(e, "Serialize"))
+                    // or all namespaces
+                    || e.kind() == cppast::cpp_entity_kind::namespace_t;
         },
         [](const cppast::cpp_entity& e, const cppast::visitor_info& info) {
             if (e.kind() == cppast::cpp_entity_kind::class_t && !info.is_old_entity())
             {
                 auto& class_ = static_cast<const cppast::cpp_class&>(e);
 
-                std::cout << "template <>\n";
-                std::cout << "void Engine::deserialize<" << class_.name() << ", true>(json &js, Engine::Entity *entity) {\n";
-                
-                std::cout << "  " << class_.name() << " *e = (" << class_.name() << " *)entity;\n";
+                std::cout << "void " << class_.name() << "::Deserialize(json &js, Engine::Entity *entity) {\n";
                 
                 // deserialize member variables
+                std::cout << "  " << class_.name() << " *e = (" << class_.name() << " *)entity;\n";
                 std::vector<const cppast::cpp_entity *> entities;
                 for (auto &member : class_)  {
                     if (member.kind() == cppast::cpp_entity_kind::member_variable_t) {
@@ -111,13 +114,16 @@ void generate_deserialize(const cppast::cpp_file& file) {
                 }
 
                 // deserialize base classes
-                for (auto& base : class_.bases()) {
-                    if (cppast::has_attribute(base, "Serialize")) {
-                        std::cout << "  deserialize<" << base.name() << ", true>(js, entity);\n";
-                    }
-                }
+                std::cout << "  " << (*class_.bases().begin()).name() << "::StaticType()->Deserialize(js, entity);\n";
 
                 std::cout << "}\n";
+            } else if (e.kind() == cppast::cpp_entity_kind::namespace_t) {
+                if (info.event == cppast::visitor_info::container_entity_enter)
+                    // open namespace
+                    std::cout << "namespace " << e.name() << " {\n";
+                else // if (info.event == cppast::visitor_info::container_entity_exit)
+                    // close namespace
+                    std::cout << "}\n";
             }
         });   
 }
@@ -130,7 +136,9 @@ void generate_typeinit(const cppast::cpp_file& file) {
             return (!cppast::is_templated(e)
                     && e.kind() == cppast::cpp_entity_kind::class_t
                     && cppast::is_definition(e)
-                    && cppast::has_attribute(e, "Serialize"));
+                    && cppast::has_attribute(e, "Serialize"))
+                    // or all namespaces
+                    || e.kind() == cppast::cpp_entity_kind::namespace_t;
         },
         [](const cppast::cpp_entity& e, const cppast::visitor_info& info) {
             if (e.kind() == cppast::cpp_entity_kind::class_t && !info.is_old_entity())
@@ -140,8 +148,11 @@ void generate_typeinit(const cppast::cpp_file& file) {
                 std::cout << "  " << class_.name() << "::StaticType(new Type(\""
                 << class_.name() << "\", "
                 << "instantiate<" << class_.name() << ", true>, "
-                << "serialize<" << class_.name() << ", true>, "
-                << "deserialize<" << class_.name() << ", true>));\n";
+                << class_.name() << "::Serialize, "
+                << class_.name() << "::Deserialize));\n";
+            } else if (e.kind() == cppast::cpp_entity_kind::namespace_t) {
+                if (info.event == cppast::visitor_info::container_entity_enter)
+                    std::cout << "  using namespace " << e.name() << ";\n";
             }
         });
 }
@@ -154,7 +165,9 @@ void generate_typeclear(const cppast::cpp_file& file) {
             return (!cppast::is_templated(e)
                     && e.kind() == cppast::cpp_entity_kind::class_t
                     && cppast::is_definition(e)
-                    && cppast::has_attribute(e, "Serialize"));
+                    && cppast::has_attribute(e, "Serialize"))
+                    // or all namespaces
+                    || e.kind() == cppast::cpp_entity_kind::namespace_t;
         },
         [](const cppast::cpp_entity& e, const cppast::visitor_info& info) {
             if (e.kind() == cppast::cpp_entity_kind::class_t && !info.is_old_entity())
@@ -162,6 +175,9 @@ void generate_typeclear(const cppast::cpp_file& file) {
                 auto& class_ = static_cast<const cppast::cpp_class&>(e);
                 
                 std::cout << "  delete " << class_.name() << "::StaticType();\n";
+            } else if (e.kind() == cppast::cpp_entity_kind::namespace_t) {
+                if (info.event == cppast::visitor_info::container_entity_enter)
+                    std::cout << "  using namespace " << e.name() << ";\n";
             }
         });
 }
@@ -263,23 +279,6 @@ int main(int argc, char* argv[])
     std::cout << "#include <nlohmann/json.hpp>\n";
     std::cout << "#include <" << module_name << ".hpp>\n";
     std::cout << "using json = nlohmann::json;\n";
-    std::cout << "using namespace std;\n";
-    std::cout << "using namespace glm;\n";
-    std::cout << "using namespace Engine;\n";   
-
-    /* users can define classes that derives component */
-    if (module_name == "User") {
-        std::cout << "template <>\n";
-        std::cout << "void Engine::serialize<Component, true>(json &js, const Engine::Entity *entity) {\n";
-        std::cout << "  const Component *e = (const Component *)entity;\n";
-        std::cout << "  js.push_back(e->enabled);\n";
-        std::cout << "  js.push_back(e->gameObject);\n}\n";
-        std::cout << "template <>\n";
-        std::cout << "void Engine::deserialize<Component, true>(json &js, Engine::Entity *entity) {\n";
-        std::cout << "  Component *e = (Component *)entity;\n";
-        std::cout << "  e->gameObject = js.back().get<Engine::GameObject*>(); js.erase(--js.end());\n";
-        std::cout << "  e->enabled = js.back().get<bool>(); js.erase(--js.end());\n}\n";
-    }
 
     return example_main(argc, argv, {}, generate_serialize, generate_deserialize, generate_typeinit, generate_typeclear);
 }

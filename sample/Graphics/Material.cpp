@@ -28,8 +28,10 @@ Material::~Material() {
 }
 
 void Material::Apply() {
-    shared_ptr<Shader> vertexShader = GetVertexShader();
-    shared_ptr<Shader> fragmentShader = GetFragmentShader();
+    AMaterial *amaterial = (AMaterial *)asset;
+    vertexShader = dynamic_pointer_cast<Shader>(amaterial->GetVertexShader()->GetResource());
+    fragmentShader = dynamic_pointer_cast<Shader>(amaterial->GetFragmentShader()->GetResource());
+    mainTexture = dynamic_pointer_cast<Texture>(amaterial->GetMainTexture()->GetResource());
     if (!vertexShader) {
         cerr << '[' << __FUNCTION__ << ']' << " missing vertex shader in Material:" << GetName() << '\n';
         throw exception();
@@ -43,7 +45,7 @@ void Material::Apply() {
 
     if (vertexShader->GetShaderType() != GL_VERTEX_SHADER ||
         fragmentShader->GetShaderType() != GL_FRAGMENT_SHADER) {
-        cerr << '[' << __FUNCTION__ << ']' << " shader type mismatch";
+        cerr << '[' << __FUNCTION__ << ']' << " shader type mismatch in Material: " << GetName() << '\n';
         throw exception();
     }
 
@@ -52,6 +54,12 @@ void Material::Apply() {
     glAttachShader(program, vertexShader->id);
     glAttachShader(program, fragmentShader->id);
     glLinkProgram(program);
+
+    if (glGetError() != GL_NO_ERROR) {
+        glDeleteProgram(program);
+        cerr << '[' << __FUNCTION__ << ']' << " failed program link in Material: " << GetName() << '\n';
+        throw exception();
+    }
 
     // sampler uniform values
     GLint location = glGetUniformLocation(program, "_MAIN_TEX");
@@ -200,19 +208,4 @@ void Material::SetMatrixArray(const char *name, const mat4 *value, int length) {
 void Material::UseTextures() {
     glActiveTexture(GL_TEXTURE0);
     glBindTexture(GL_TEXTURE_2D, GetMainTexture()->id);
-}
-
-shared_ptr<Shader> Material::GetVertexShader() const {
-    AMaterial *amaterial = (AMaterial *)asset; 
-    return dynamic_pointer_cast<Shader>(amaterial->GetVertexShader()->GetResource());
-}
-
-shared_ptr<Shader> Material::GetFragmentShader() const {
-    AMaterial *amaterial = (AMaterial *)asset; 
-    return dynamic_pointer_cast<Shader>(amaterial->GetFragmentShader()->GetResource());
-}
-
-shared_ptr<Texture> Material::GetMainTexture() const {
-    AMaterial *amaterial = (AMaterial *)asset; 
-    return dynamic_pointer_cast<Texture>(amaterial->GetMainTexture()->GetResource());
 }

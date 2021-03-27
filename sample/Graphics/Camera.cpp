@@ -4,63 +4,52 @@
 #include <GameObject.hpp>
 #include <Group.hpp>
 #include <Transform.hpp>
+#include <Scene.hpp>
 #include <Graphics/Camera.hpp>
 #include <Graphics/Material.hpp>
 #include <Graphics/Mesh.hpp>
-#include <Graphics/Renderer.hpp>
+#include <Graphics/Drawer.hpp>
+#include <Graphics/Framebuffer.hpp>
+#include <Graphics/Texture.hpp>
+#include <Graphics/Window.hpp>
 
 using namespace glm;
 using namespace std;
 using namespace Engine;
 
-void Camera::ComputeNormalization() {
-    if (orthographic) {
-        normalization = ortho(left, right, bottom, top, nr, fr);
-    } else {
-        normalization = perspective(radians(fovy), width / height, nr, fr);
+const mat4 &Camera::GetNormalization() {
+    if (dirty) {
+        if (orthographic) {
+            normalization = ortho(-size * aspectRatio, size * aspectRatio, -size, size, nr, fr);
+        } else {
+            normalization = perspective(radians(fovy), aspectRatio, nr, fr);
+        }
+        dirty = false;   
     }
-}
-
-void Camera::SetFovy(float fovy) {
-    this->fovy = fovy;
-    ComputeNormalization();
-}
-
-void Camera::SetWidth(float width) {
-    this->width = width;
-    ComputeNormalization();
-}
-
-void Camera::SetNear(float nr) {
-    this->nr = nr;
-    ComputeNormalization();
-}
-
-void Camera::SetFar(float fr) {
-    this->fr = fr;
-    ComputeNormalization();
-}
-
-void Camera::SetLeft(float left) {
-    this->left = left;
-    ComputeNormalization();
-}
-
-void Camera::SetRight(float right) {
-    this->right = right;
-    ComputeNormalization();
-}
-void Camera::SetTop(float top) {
-    this->top = top;
-    ComputeNormalization();
-}
-
-void Camera::SetBottom(float bottom) {
-    this->bottom = bottom;
-    ComputeNormalization();
+    return normalization;
 }
 
 void Camera::Render() {
+    if (this == Scene::GetInstance().GetSettiing()->GetMainCamera()) {
+        Window &window = Window::GetInstance();
+        float windowAspectRatio = (float)window.GetWidth() / window.GetHeight();
+        if (aspectRatio != windowAspectRatio) {
+            aspectRatio = windowAspectRatio;
+            dirty = true;
+        }
+        glBindFramebuffer(GL_FRAMEBUFFER, 0);
+    } else if (framebuffer) {
+        float framebufferAspectRatio = (float)framebuffer->GetWidth() / framebuffer->GetHeight();
+        if (aspectRatio != framebufferAspectRatio) {
+            aspectRatio = framebufferAspectRatio;
+            dirty = true;
+        }
+        glBindFramebuffer(GL_FRAMEBUFFER, framebuffer->fbo);
+    } else {
+        cerr << '[' << __FUNCTION__ << ']' << " framebuffer not specified in Camera: " << GetGameObject()->GetName() << '\n';
+        throw exception();
+    }
+
     glClearColor((GLclampf) 0.0f, (GLclampf) 0.0f, (GLclampf) 0.0f, (GLclampf) 0.0f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
@@ -79,10 +68,9 @@ void Camera::Render() {
     glEnable(GL_CULL_FACE);
     glCullFace(GL_BACK);
 
-    for (IDraw *idraw : GetGameObject()->GetGroup()->idraws) {
-        Component *component = dynamic_cast<Component *>(idraw);
-        if (!component->IsRemoved() && component->IsEnabled()) {
-            ((IDraw *)idraw)->Draw(this);
+    for (Drawer *drawer : GetGroup()->drawers) {
+        if (drawer->IsEnabled()) {
+            drawer->Draw(this);
         }
     }
 

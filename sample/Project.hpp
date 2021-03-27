@@ -11,6 +11,8 @@
 #include <string>
 #include <type_traits>
 #include <unordered_map>
+#include <unordered_set>
+#include <vector>
 #include <nlohmann/json.hpp>
 
 #include <Entity.hpp>
@@ -24,12 +26,12 @@ namespace Engine {
 
     private:
         uint64_t serial;
-        std::string startSceneName;
+        int startSceneIndex;
         
     public:
         uint64_t GetSerial() { return ++serial; }
-        const std::string &GetStartSceneName() const { return startSceneName; }
-        void SetStartSceneName(const std::string &name) { startSceneName = name; }
+        int GetStartSceneIndex() const { return startSceneIndex; }
+        void SetStartSceneIndex(int startScene) { this->startSceneIndex = startSceneIndex; }
         
         friend class Project;
     };
@@ -60,8 +62,10 @@ namespace Engine {
         std::string directory;
         std::string libpath;
         ProjectSetting *setting;
-        std::unordered_map<std::string, std::string> scenes;
+        std::vector<std::string> scenes;
         std::unordered_map<uint64_t, Asset *> assets;
+
+        std::unordered_set<Asset *> garbages;
 
     public:
         Project(const Project &) = delete;
@@ -70,26 +74,26 @@ namespace Engine {
         const std::string &GetName() const { return name; }
         const std::string &GetDirectoy() const { return directory; }
         ProjectSetting *GetSetting() const { return setting; }
-        const std::string &GetScene(const std::string &name) const;
-        void AddScene(const std::string &name, const std::string &path);
-        void RemoveScene(const std::string &name);
-        template <class T, std::enable_if_t<std::is_base_of_v<Asset, T>, bool> = true>
-        T *AddAsset(const std::string &name) {
-            T *asset = new T();
-            asset->serial = setting->GetSerial();
-            asset->SetName(name);
-            assets.insert({asset->serial, asset});
-            return asset;
-        }
+        const std::string &GetScene(int index) const;
+        void AddScene(const std::string &path);
+        void RemoveScene(int index);
         template <class T, std::enable_if_t<std::is_base_of_v<Asset, T>, bool> = true>
         T *GetAsset(uint64_t serial) const {
             auto it = assets.find(serial);
-            if (it != assets.end() && !(it->second->IsRemoved())) {
-                return (T *)(it->second);
+            if (it != assets.end()) {
+                return dynamic_cast<T *>(it->second);
             } else {
                 return nullptr;
             }
         }
+        template <class T, std::enable_if_t<std::is_base_of_v<Asset, T>, bool> = true>
+        T *AddAsset() {
+            T *asset = new T();
+            asset->serial = setting->GetSerial();
+            assets.insert({asset->serial, asset});
+            return asset;
+        }
+        void RemoveAsset(Asset *asset);
 
         friend class Scene;
     };

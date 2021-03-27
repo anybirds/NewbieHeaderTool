@@ -4,7 +4,6 @@
 
 #include <Asset.hpp>
 #include <Resource.hpp>
-#include <Type.hpp>
 
 namespace Engine {
     
@@ -33,6 +32,8 @@ namespace Engine {
     */
     class ENGINE_EXPORT Mesh : public Resource {
     private:
+        std::shared_ptr<Model> model;
+        
 		unsigned vcnt;
 		unsigned icnt;
 
@@ -48,9 +49,9 @@ namespace Engine {
 
         unsigned GetVertexCount() const { return vcnt; }
         unsigned GetFaceCount() const { return icnt / 3; }
-        std::shared_ptr<Model> GetModel() const;
         uint32_t GetIndex() const { AMesh *amesh = (AMesh *)asset; return amesh->GetIndex(); }
+        std::shared_ptr<Model> GetModel() const { return model; }
 
-        friend class Renderer;
+        friend class MeshDrawer;
     };
 }

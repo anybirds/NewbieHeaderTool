@@ -3,6 +3,7 @@
 #include <sstream>
 
 #include <Graphics/Shader.hpp>
+#include <Project.hpp>
 
 using namespace std;
 using namespace Engine;
@@ -30,14 +31,14 @@ void Shader::Apply() {
     glDeleteShader(id);
     id = glCreateShader(GetShaderType());
     if (!id) {
-        cerr << '[' << __FUNCTION__ << ']' << " failed to create a new shader" << endl;
+        cerr << '[' << __FUNCTION__ << ']' << " failed to create a new shader" << '\n';
         throw exception();
     }
 
-    ifstream file(GetPath());
+    ifstream file(Project::GetInstance().GetDirectoy() + "/" + GetPath());
     if (!file.is_open()) {
-        cerr << '[' << __FUNCTION__ << ']' << " failed to find a shader: " << GetPath() << endl;
         glDeleteShader(id);
+        cerr << '[' << __FUNCTION__ << ']' << " failed to find a shader: " << GetPath() << '\n';
         throw exception();
     }
 
@@ -51,8 +52,8 @@ void Shader::Apply() {
     GLint status = 0;
     glGetShaderiv(id, GL_COMPILE_STATUS, &status);
     if (status == GL_FALSE) {
-        cerr << '[' << __FUNCTION__ << ']' << " failed to Compile a shader: " << GetPath() << endl;
         glDeleteShader(id);
+        cerr << '[' << __FUNCTION__ << ']' << " failed to Compile a shader: " << GetPath() << '\n';
         throw exception();
     }
 }

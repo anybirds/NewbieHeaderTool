@@ -3,66 +3,52 @@
 #include <gl/glew.h>
 #include <glm/glm.hpp>
 
-#include <Component.hpp>
-#include <Type.hpp>
-#include <IRender.hpp>
-#include <Graphics/Window.hpp>
+#include <Graphics/Renderer.hpp>
 
 namespace Engine {
+
+    class Framebuffer;
+
     /*
     Featured by its normalization matrix.
     Specify camera properties that affect the normalization matrix.
     */
-    class ENGINE_EXPORT [[Serialize]] Camera : [[Serialize]] public Component, public IRender {
+    class ENGINE_EXPORT [[Serialize]] Camera : [[Serialize]] public Renderer {
         TYPE(Camera)
 
     private:
+        bool dirty;
+
         glm::mat4 normalization;
 
         bool orthographic;
         float fovy;
-        float width;
-        float height;
+        float aspectRatio;
         float nr; // near
         float fr; // far
-        float left;
-        float right;
-        float bottom;
-        float top;
-    
-    public:
-        Camera() : fovy(60.0f), 
-        width(Window::GetInstance().GetWidth()), height(Window::GetInstance().GetHeight()), 
-        nr(0.1f), fr(1000.0f) 
-        { ComputeNormalization(); }
+        float size;
+        
+        std::shared_ptr<Framebuffer> framebuffer;
 
-        void ComputeNormalization();
+    public:
+        Camera() : dirty(true), fovy(60.0f), aspectRatio(1.0f), nr(0.1f), fr(1000.0f) { }
 
         bool IsOrthographic() const { return orthographic; }
         bool IsPerspective() const { return !orthographic; }
         float GetFovy() const { return fovy; }
-        float GetWidth() const { return width; }
+        float GetAspectRatio() const { return aspectRatio; }
         float GetNear() const { return nr; }
         float GetFar() const { return fr; }
-        float GetLeft() const { return left; }
-        float GetRight() const { return bottom; }
-        float GetTop() const { return top; }
-        const glm::mat4 &GetNormalization() { return normalization; }
+        float GetSize() const { return size; }
+        const glm::mat4 &GetNormalization();
 
-        void SetOrthographic() { orthographic = true; ComputeNormalization(); }
-        void SetPerspective() { orthographic = false; ComputeNormalization(); }
-        void SetFovy(float fovy);
-        void SetWidth(float width);
-        void SetHeight(float height);
-        void SetNear(float nr);
-        void SetFar(float fr);
-        void SetLeft(float left);
-        void SetRight(float right);
-        void SetTop(float top);
-        void SetBottom(float bottom);
+        void SetOrthographic() { orthographic = true; dirty = true; }
+        void SetPerspective() { orthographic = false; dirty = true; }
+        void SetFovy(float fovy) { this->fovy = fovy; dirty = true; }
+        void SetNear(float nr) { this->nr = nr; dirty = true; }
+        void SetFar(float fr) { this->fr = fr; dirty = true; }
+        void SetSize(float size) { this->size = size; dirty = true; }
 
         virtual void Render() override;
-
-        friend class Renderer;
     };
 }

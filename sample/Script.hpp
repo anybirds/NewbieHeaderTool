@@ -1,17 +1,13 @@
 #pragma once
 
-#include <unordered_set>
-
 #include <Component.hpp>
-#include <IBehavior.hpp>
 
 namespace Engine {
-    /*
-    Abstract base class of all user-defined scripts
-    */
-    class ENGINE_EXPORT [[Serialize]] Script : [[Serialize]] public Component, public IBehavior {
+    class ENGINE_EXPORT [[Serialize]] Script : [[Serialize]] public Component {
+        TYPE(Script)
+
     public:
-        virtual void Start() override;
-        virtual void Update() override;
+        virtual void Start() {}
+        virtual void Update() {}
     };
 }

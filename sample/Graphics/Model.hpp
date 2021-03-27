@@ -6,7 +6,6 @@
 
 #include <Asset.hpp>
 #include <Resource.hpp>
-#include <Type.hpp>
 
 namespace Engine {
     class ENGINE_EXPORT [[Serialize]] AModel : [[Serialize]] public Asset {
@@ -17,7 +16,7 @@ namespace Engine {
     
     public:
         virtual std::shared_ptr<Resource> GetResource() override;
-        const std::string &GetPath() const { return path; }
+        const std::string &GetPath() const { return path; };
 
         void SetPath(const std::string &path) { this->path = path; }
     };

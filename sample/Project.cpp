@@ -71,7 +71,7 @@ bool Project::Load(const string &path) {
         fs >> js;
         
         // read scenes
-        project.scenes = js["Scene"].get<unordered_map<string, string>>();
+        project.scenes = js["Scene"].get<vector<string>>();
         
         // read assets
         json &assets = js["Asset"];
@@ -130,18 +130,10 @@ bool Project::Save() {
 
         // write assets
         json &assets = js["Asset"];
-        unordered_map<uint64_t, Asset *> temp;
-        for (auto it = project.assets.begin(); it != project.assets.end(); ) {
-            if (it->second->IsRemoved()) {
-                temp.insert(*it);
-                it = project.assets.erase(it);
-            } else {
-                Type *type = it->second->GetType();
-                type->Serialize(assets[type->GetName()][to_string(it->first)], it->second);
-                it++;
-            }
+        for (auto &p : project.assets) {
+            Type *type = p.second->GetType();
+            type->Serialize(assets[type->GetName()][to_string(p.first)], p.second);
         }
-        project.assets.insert(temp.begin(), temp.end());
 
         fs << js;
     } catch(...) {
@@ -172,6 +164,10 @@ void Project::Close() {
         delete p.second;
     }
     project.assets.clear(); 
+    for (Asset *garbage : project.garbages) {
+        delete garbage;
+    }
+    project.garbages.clear();
 
     // clear out lib and types
     if (project.lib) {
@@ -186,14 +182,20 @@ void Project::Close() {
     cerr << '[' << __FUNCTION__ << ']' << " close projece done.\n";
 }
 
-const string &Project::GetScene(const string &name) const {
-    return scenes.at(name);
+const string &Project::GetScene(int index) const {
+    return scenes.at(index);
 }
 
-void Project::AddScene(const string &name, const string &path) {
-    scenes[name] = path;
+void Project::AddScene(const string &path) {
+    scenes.push_back(path);
 }
 
-void Project::RemoveScene(const string &name) {
-    scenes.erase(name);
+void Project::RemoveScene(int index) {
+    scenes.at(index);
+    scenes.erase(scenes.begin() + index);
+}
+
+void Project::RemoveAsset(Asset *asset) {
+    assets.erase(asset->GetSerial());
+    garbages.insert(asset);
 }
