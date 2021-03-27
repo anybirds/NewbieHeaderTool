@@ -13,7 +13,7 @@ namespace Engine {
     /*
     Base class for all serializable types
     */
-    class ENGINE_EXPORT Entity {
+    class ENGINE_EXPORT [[Serialize]] Entity {
         TYPE(Entity)
 
     public:

@@ -3,7 +3,7 @@
 #include <Component.hpp>
 
 namespace Engine {
-    class ENGINE_EXPORT [[Serialize]] Script : [[Serialize]] public Component {
+    class ENGINE_EXPORT [[Serialize]] Script : public Component {
         TYPE(Script)
 
     public:

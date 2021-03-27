@@ -12,7 +12,7 @@ namespace Engine {
     /*
     Represents a single frame in 3D space that has position, rotation, scale and hierarchical parent information.
     */
-    class ENGINE_EXPORT [[Serialize]] Transform final : [[Serialize]] public Component {
+    class ENGINE_EXPORT [[Serialize]] Transform final : public Component {
         TYPE(Transform)
 
     private:

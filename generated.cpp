@@ -20,6 +20,9 @@ void Component::Serialize(json &js, const Engine::Entity *entity) {
 }
 }
 namespace Engine {
+void Entity::Serialize(json &js, const Engine::Entity *entity) {
+  const Entity *e = (const Entity *)entity;
+}
 }
 namespace Engine {
 void GameObject::Serialize(json &js, const Engine::Entity *entity) {
@@ -196,6 +199,9 @@ void Component::Deserialize(json &js, Engine::Entity *entity) {
 }
 }
 namespace Engine {
+void Entity::Deserialize(json &js, Engine::Entity *entity) {
+  Entity *e = (Entity *)entity;
+}
 }
 namespace Engine {
 void GameObject::Deserialize(json &js, Engine::Entity *entity) {
@@ -356,45 +362,46 @@ namespace Engine {
 }
 void type_init() {
   using namespace Engine;
-  Asset::StaticType(new Type("Asset", instantiate<Asset, true>, Asset::Serialize, Asset::Deserialize));
+  Asset::StaticType(new Engine::Type("Asset", Engine::instantiate<Asset, true>, Asset::Serialize, Asset::Deserialize));
   using namespace Engine;
-  Component::StaticType(new Type("Component", instantiate<Component, true>, Component::Serialize, Component::Deserialize));
+  Component::StaticType(new Engine::Type("Component", Engine::instantiate<Component, true>, Component::Serialize, Component::Deserialize));
   using namespace Engine;
+  Entity::StaticType(new Engine::Type("Entity", Engine::instantiate<Entity, true>, Entity::Serialize, Entity::Deserialize));
   using namespace Engine;
-  GameObject::StaticType(new Type("GameObject", instantiate<GameObject, true>, GameObject::Serialize, GameObject::Deserialize));
+  GameObject::StaticType(new Engine::Type("GameObject", Engine::instantiate<GameObject, true>, GameObject::Serialize, GameObject::Deserialize));
   using namespace Engine;
-  Camera::StaticType(new Type("Camera", instantiate<Camera, true>, Camera::Serialize, Camera::Deserialize));
+  Camera::StaticType(new Engine::Type("Camera", Engine::instantiate<Camera, true>, Camera::Serialize, Camera::Deserialize));
   using namespace Engine;
-  Drawer::StaticType(new Type("Drawer", instantiate<Drawer, true>, Drawer::Serialize, Drawer::Deserialize));
+  Drawer::StaticType(new Engine::Type("Drawer", Engine::instantiate<Drawer, true>, Drawer::Serialize, Drawer::Deserialize));
   using namespace Engine;
-  AFramebuffer::StaticType(new Type("AFramebuffer", instantiate<AFramebuffer, true>, AFramebuffer::Serialize, AFramebuffer::Deserialize));
+  AFramebuffer::StaticType(new Engine::Type("AFramebuffer", Engine::instantiate<AFramebuffer, true>, AFramebuffer::Serialize, AFramebuffer::Deserialize));
   using namespace Engine;
-  AMaterial::StaticType(new Type("AMaterial", instantiate<AMaterial, true>, AMaterial::Serialize, AMaterial::Deserialize));
+  AMaterial::StaticType(new Engine::Type("AMaterial", Engine::instantiate<AMaterial, true>, AMaterial::Serialize, AMaterial::Deserialize));
   using namespace Engine;
-  AMesh::StaticType(new Type("AMesh", instantiate<AMesh, true>, AMesh::Serialize, AMesh::Deserialize));
+  AMesh::StaticType(new Engine::Type("AMesh", Engine::instantiate<AMesh, true>, AMesh::Serialize, AMesh::Deserialize));
   using namespace Engine;
-  MeshDrawer::StaticType(new Type("MeshDrawer", instantiate<MeshDrawer, true>, MeshDrawer::Serialize, MeshDrawer::Deserialize));
+  MeshDrawer::StaticType(new Engine::Type("MeshDrawer", Engine::instantiate<MeshDrawer, true>, MeshDrawer::Serialize, MeshDrawer::Deserialize));
   using namespace Engine;
-  AModel::StaticType(new Type("AModel", instantiate<AModel, true>, AModel::Serialize, AModel::Deserialize));
+  AModel::StaticType(new Engine::Type("AModel", Engine::instantiate<AModel, true>, AModel::Serialize, AModel::Deserialize));
   using namespace Engine;
-  Renderer::StaticType(new Type("Renderer", instantiate<Renderer, true>, Renderer::Serialize, Renderer::Deserialize));
+  Renderer::StaticType(new Engine::Type("Renderer", Engine::instantiate<Renderer, true>, Renderer::Serialize, Renderer::Deserialize));
   using namespace Engine;
-  AShader::StaticType(new Type("AShader", instantiate<AShader, true>, AShader::Serialize, AShader::Deserialize));
+  AShader::StaticType(new Engine::Type("AShader", Engine::instantiate<AShader, true>, AShader::Serialize, AShader::Deserialize));
   using namespace Engine;
-  ATexture::StaticType(new Type("ATexture", instantiate<ATexture, true>, ATexture::Serialize, ATexture::Deserialize));
-  using namespace Engine;
-  using namespace Engine;
-  Group::StaticType(new Type("Group", instantiate<Group, true>, Group::Serialize, Group::Deserialize));
-  using namespace Engine;
-  ProjectSetting::StaticType(new Type("ProjectSetting", instantiate<ProjectSetting, true>, ProjectSetting::Serialize, ProjectSetting::Deserialize));
+  ATexture::StaticType(new Engine::Type("ATexture", Engine::instantiate<ATexture, true>, ATexture::Serialize, ATexture::Deserialize));
   using namespace Engine;
   using namespace Engine;
-  SceneSetting::StaticType(new Type("SceneSetting", instantiate<SceneSetting, true>, SceneSetting::Serialize, SceneSetting::Deserialize));
+  Group::StaticType(new Engine::Type("Group", Engine::instantiate<Group, true>, Group::Serialize, Group::Deserialize));
   using namespace Engine;
-  Script::StaticType(new Type("Script", instantiate<Script, true>, Script::Serialize, Script::Deserialize));
+  ProjectSetting::StaticType(new Engine::Type("ProjectSetting", Engine::instantiate<ProjectSetting, true>, ProjectSetting::Serialize, ProjectSetting::Deserialize));
   using namespace Engine;
   using namespace Engine;
-  Transform::StaticType(new Type("Transform", instantiate<Transform, true>, Transform::Serialize, Transform::Deserialize));
+  SceneSetting::StaticType(new Engine::Type("SceneSetting", Engine::instantiate<SceneSetting, true>, SceneSetting::Serialize, SceneSetting::Deserialize));
+  using namespace Engine;
+  Script::StaticType(new Engine::Type("Script", Engine::instantiate<Script, true>, Script::Serialize, Script::Deserialize));
+  using namespace Engine;
+  using namespace Engine;
+  Transform::StaticType(new Engine::Type("Transform", Engine::instantiate<Transform, true>, Transform::Serialize, Transform::Deserialize));
   using namespace glm;
   using namespace Engine;
 }
@@ -404,6 +411,7 @@ void type_clear() {
   using namespace Engine;
   delete Component::StaticType();
   using namespace Engine;
+  delete Entity::StaticType();
   using namespace Engine;
   delete GameObject::StaticType();
   using namespace Engine;

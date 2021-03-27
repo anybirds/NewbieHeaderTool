@@ -53,7 +53,9 @@ void generate_serialize(const cppast::cpp_file& file)
                 std::cout << "void " << class_.name() << "::Serialize(json &js, const Engine::Entity *entity) {\n";
 
                 // serialize the base class
-                std::cout << "  " << (*class_.bases().begin()).name() << "::StaticType()->Serialize(js, entity);\n";
+                if (!class_.bases().empty()) {
+                    std::cout << "  " << (*class_.bases().begin()).name() << "::StaticType()->Serialize(js, entity);\n";
+                }
                 
                 // serialize member variables
                 std::cout << "  const " << class_.name() << " *e = (const " << class_.name() << " *)entity;\n";
@@ -114,7 +116,9 @@ void generate_deserialize(const cppast::cpp_file& file) {
                 }
 
                 // deserialize base classes
-                std::cout << "  " << (*class_.bases().begin()).name() << "::StaticType()->Deserialize(js, entity);\n";
+                if (!class_.bases().empty()) {
+                    std::cout << "  " << (*class_.bases().begin()).name() << "::StaticType()->Deserialize(js, entity);\n";
+                }
 
                 std::cout << "}\n";
             } else if (e.kind() == cppast::cpp_entity_kind::namespace_t) {
@@ -145,9 +149,9 @@ void generate_typeinit(const cppast::cpp_file& file) {
             {
                 auto& class_ = static_cast<const cppast::cpp_class&>(e);
                 
-                std::cout << "  " << class_.name() << "::StaticType(new Type(\""
+                std::cout << "  " << class_.name() << "::StaticType(new Engine::Type(\""
                 << class_.name() << "\", "
-                << "instantiate<" << class_.name() << ", true>, "
+                << "Engine::instantiate<" << class_.name() << ", true>, "
                 << class_.name() << "::Serialize, "
                 << class_.name() << "::Deserialize));\n";
             } else if (e.kind() == cppast::cpp_entity_kind::namespace_t) {

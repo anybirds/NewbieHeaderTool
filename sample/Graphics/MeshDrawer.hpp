@@ -12,7 +12,7 @@ namespace Engine {
 	/*
 	Responsible for rendering objects that have Mesh and Material.
 	*/
-	class ENGINE_EXPORT [[Serialize]] MeshDrawer final : [[Serialize]] public Drawer {
+	class ENGINE_EXPORT [[Serialize]] MeshDrawer final : public Drawer {
 		TYPE(MeshDrawer)
 
 	private:

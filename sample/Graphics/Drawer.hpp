@@ -6,7 +6,7 @@ namespace Engine {
     
     class Camera;
 
-    class ENGINE_EXPORT [[Serialize]] Drawer : [[Serialize]] public Component {
+    class ENGINE_EXPORT [[Serialize]] Drawer : public Component {
         TYPE(Drawer)
     
     private:

@@ -3,7 +3,7 @@
 #include <Component.hpp>
 
 namespace Engine {
-    class ENGINE_EXPORT [[Serialize]] Renderer : [[Serialize]] public Component {
+    class ENGINE_EXPORT [[Serialize]] Renderer : public Component {
         TYPE(Renderer)
     
     private:
